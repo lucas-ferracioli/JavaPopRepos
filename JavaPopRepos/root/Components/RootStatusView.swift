@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-class RootStatusView: UIView, ViewCode {
+class RootStatusView: UIView {
     private let stackView: UIStackView = {
         let stackview = UIStackView()
         stackview.axis = .horizontal
@@ -29,13 +29,18 @@ class RootStatusView: UIView, ViewCode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupViewHierarchy() {
+    private func setupView() {
+        setupViewHierarchy()
+        createViewConstraints()
+    }
+    
+    private func setupViewHierarchy() {
         stackView.addArrangedSubview(iconImageView)
         stackView.addArrangedSubview(valueLabel)
         addSubview(stackView)
     }
     
-    func createViewConstraints() {
+    private func createViewConstraints() {
         stackView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }

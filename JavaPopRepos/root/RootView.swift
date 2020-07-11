@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-class RootView: UIView, ViewCode {
+class RootView: UIView {
     private let tableView: UITableView = {
         let tableView = UITableView()
         return tableView
@@ -18,11 +18,16 @@ class RootView: UIView, ViewCode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupViewHierarchy() {
+    private func setupView() {
+        setupViewHierarchy()
+        createViewConstraints()
+    }
+    
+    private func setupViewHierarchy() {
         addSubview(tableView)
     }
     
-    func createViewConstraints() {
+    private func createViewConstraints() {
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }

@@ -23,7 +23,6 @@
 		CAD279D524B8175100C6DA41 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD279D424B8175100C6DA41 /* RootViewController.swift */; };
 		CAD279D724B8175A00C6DA41 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD279D624B8175A00C6DA41 /* RootPresenter.swift */; };
 		CAD279D924B8176900C6DA41 /* RootProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD279D824B8176900C6DA41 /* RootProtocols.swift */; };
-		CAD279DC24B817E000C6DA41 /* ViewCodeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD279DB24B817E000C6DA41 /* ViewCodeProtocols.swift */; };
 		CAD279DE24B81BF300C6DA41 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD279DD24B81BF300C6DA41 /* UIViewController+Ext.swift */; };
 		CAD279E024B81CE600C6DA41 /* RootViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD279DF24B81CE600C6DA41 /* RootViewCell.swift */; };
 		CAD279E224B81F7300C6DA41 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD279E124B81F7300C6DA41 /* Fonts.swift */; };
@@ -65,7 +64,6 @@
 		CAD279D424B8175100C6DA41 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		CAD279D624B8175A00C6DA41 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
 		CAD279D824B8176900C6DA41 /* RootProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootProtocols.swift; sourceTree = "<group>"; };
-		CAD279DB24B817E000C6DA41 /* ViewCodeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeProtocols.swift; sourceTree = "<group>"; };
 		CAD279DD24B81BF300C6DA41 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		CAD279DF24B81CE600C6DA41 /* RootViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewCell.swift; sourceTree = "<group>"; };
 		CAD279E124B81F7300C6DA41 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -193,7 +191,6 @@
 			children = (
 				CAD279CE24B8112100C6DA41 /* Coordinator.swift */,
 				CAD279D024B816C800C6DA41 /* CoordinatorProtocols.swift */,
-				CAD279DB24B817E000C6DA41 /* ViewCodeProtocols.swift */,
 				CAD279DD24B81BF300C6DA41 /* UIViewController+Ext.swift */,
 			);
 			path = general;
@@ -396,7 +393,6 @@
 				CAD279CD24B80D9800C6DA41 /* Images.swift in Sources */,
 				CAD279CF24B8112100C6DA41 /* Coordinator.swift in Sources */,
 				CAD279CB24B80D8600C6DA41 /* LocalizedStrings.swift in Sources */,
-				CAD279DC24B817E000C6DA41 /* ViewCodeProtocols.swift in Sources */,
 				CA7B2ECD24B80871004BA2D6 /* AppDelegate.swift in Sources */,
 				CA7B2ECF24B80871004BA2D6 /* SceneDelegate.swift in Sources */,
 				CAD279E024B81CE600C6DA41 /* RootViewCell.swift in Sources */,

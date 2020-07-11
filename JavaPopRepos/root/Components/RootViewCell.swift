@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-class RootViewCell: UITableViewCell, ViewCode {
+class RootViewCell: UITableViewCell {
     static let identifier = "root_view_cell"
     
     private let containerView = UIView()
@@ -59,7 +59,12 @@ class RootViewCell: UITableViewCell, ViewCode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupViewHierarchy() {
+    private func setupView() {
+        setupViewHierarchy()
+        createViewConstraints()
+    }
+    
+    private func setupViewHierarchy() {
         containerView.addSubview(profileImageView)
         containerView.addSubview(authorNameLabel)
         containerView.addSubview(usernameLabel)
@@ -71,7 +76,7 @@ class RootViewCell: UITableViewCell, ViewCode {
         addSubview(containerView)
     }
     
-    func createViewConstraints() {
+    private func createViewConstraints() {
         containerView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
