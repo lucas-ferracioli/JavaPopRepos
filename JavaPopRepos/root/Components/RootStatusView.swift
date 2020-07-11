@@ -5,6 +5,7 @@ class RootStatusView: UIView {
     private let stackView: UIStackView = {
         let stackview = UIStackView()
         stackview.axis = .horizontal
+        stackview.spacing = 2
         return stackview
     }()
     
@@ -22,7 +23,6 @@ class RootStatusView: UIView {
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         setupView()
-        show()
     }
     
     required init?(coder: NSCoder) {
@@ -46,5 +46,8 @@ class RootStatusView: UIView {
         }
     }
     
-    func show() {}
+    func show(icon: UIImage, value: String) {
+        iconImageView.image = icon
+        valueLabel.text = value
+    }
 }

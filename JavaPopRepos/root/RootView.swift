@@ -2,6 +2,15 @@ import UIKit
 import SnapKit
 
 class RootView: UIView {
+    weak var tableViewDelegate: UITableViewDelegate?
+    weak var tableViewDateSource: UITableViewDataSource?
+    
+    private var viewModels: [RootViewModel] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     private let tableView: UITableView = {
         let tableView = UITableView()
         return tableView
@@ -10,8 +19,6 @@ class RootView: UIView {
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         setupView()
-        tableView.delegate = self
-        tableView.dataSource = self
     }
     
     required init?(coder: NSCoder) {
@@ -19,8 +26,15 @@ class RootView: UIView {
     }
     
     private func setupView() {
+        setupTableView()
         setupViewHierarchy()
         createViewConstraints()
+    }
+    
+    private func setupTableView() {
+        tableView.register(RootViewCell.self, forCellReuseIdentifier: RootViewCell.identifier)
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     private func setupViewHierarchy() {
@@ -32,14 +46,20 @@ class RootView: UIView {
             $0.edges.equalToSuperview()
         }
     }
+    
+    func show(viewModels: [RootViewModel]) {
+        self.viewModels = viewModels
+    }
 }
 
 extension RootView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return RootViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: RootViewCell.identifier, for: indexPath) as? RootViewCell
+        cell?.setup(viewModel: viewModels[indexPath.row])
+        return cell ?? UITableViewCell()
     }
 }

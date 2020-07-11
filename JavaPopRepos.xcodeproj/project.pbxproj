@@ -14,11 +14,18 @@
 		CA7B2ED924B80872004BA2D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7B2ED724B80872004BA2D6 /* LaunchScreen.storyboard */; };
 		CA7B2EE424B80873004BA2D6 /* JavaPopReposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B2EE324B80873004BA2D6 /* JavaPopReposTests.swift */; };
 		CAA744AD24B94979001C55E3 /* RootStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744AC24B94979001C55E3 /* RootStatusView.swift */; };
+		CAA744AF24B94F86001C55E3 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744AE24B94F86001C55E3 /* Repository.swift */; };
+		CAA744B524B9550B001C55E3 /* RepositoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744B424B9550B001C55E3 /* RepositoriesModel.swift */; };
+		CAA744B724B95F70001C55E3 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744B624B95F70001C55E3 /* Decoder.swift */; };
+		CAA744B924B960F2001C55E3 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744B824B960F2001C55E3 /* RootViewModel.swift */; };
+		CAA744BB24B960FA001C55E3 /* RootAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744BA24B960FA001C55E3 /* RootAdapter.swift */; };
+		CAA744BD24B96465001C55E3 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744BC24B96465001C55E3 /* UIImageView+Ext.swift */; };
+		CAA744BF24B96639001C55E3 /* Int+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744BE24B96639001C55E3 /* Int+Ext.swift */; };
 		CAD279C924B80D4E00C6DA41 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAD279C824B80D4E00C6DA41 /* Localizable.strings */; };
 		CAD279CB24B80D8600C6DA41 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD279CA24B80D8600C6DA41 /* LocalizedStrings.swift */; };
 		CAD279CD24B80D9800C6DA41 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD279CC24B80D9800C6DA41 /* Images.swift */; };
 		CAD279CF24B8112100C6DA41 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD279CE24B8112100C6DA41 /* Coordinator.swift */; };
-		CAD279D124B816C800C6DA41 /* CoordinatorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD279D024B816C800C6DA41 /* CoordinatorProtocols.swift */; };
+		CAD279D124B816C800C6DA41 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD279D024B816C800C6DA41 /* Protocols.swift */; };
 		CAD279D324B8172000C6DA41 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD279D224B8172000C6DA41 /* RootView.swift */; };
 		CAD279D524B8175100C6DA41 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD279D424B8175100C6DA41 /* RootViewController.swift */; };
 		CAD279D724B8175A00C6DA41 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD279D624B8175A00C6DA41 /* RootPresenter.swift */; };
@@ -55,11 +62,18 @@
 		CA7B2EE324B80873004BA2D6 /* JavaPopReposTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaPopReposTests.swift; sourceTree = "<group>"; };
 		CA7B2EE524B80873004BA2D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAA744AC24B94979001C55E3 /* RootStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootStatusView.swift; sourceTree = "<group>"; };
+		CAA744AE24B94F86001C55E3 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		CAA744B424B9550B001C55E3 /* RepositoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesModel.swift; sourceTree = "<group>"; };
+		CAA744B624B95F70001C55E3 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		CAA744B824B960F2001C55E3 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		CAA744BA24B960FA001C55E3 /* RootAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAdapter.swift; sourceTree = "<group>"; };
+		CAA744BC24B96465001C55E3 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		CAA744BE24B96639001C55E3 /* Int+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ext.swift"; sourceTree = "<group>"; };
 		CAD279C824B80D4E00C6DA41 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		CAD279CA24B80D8600C6DA41 /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
 		CAD279CC24B80D9800C6DA41 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		CAD279CE24B8112100C6DA41 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		CAD279D024B816C800C6DA41 /* CoordinatorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocols.swift; sourceTree = "<group>"; };
+		CAD279D024B816C800C6DA41 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		CAD279D224B8172000C6DA41 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		CAD279D424B8175100C6DA41 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		CAD279D624B8175A00C6DA41 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
@@ -162,6 +176,16 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		CAA744C024B96746001C55E3 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CAD279DD24B81BF300C6DA41 /* UIViewController+Ext.swift */,
+				CAA744BC24B96465001C55E3 /* UIImageView+Ext.swift */,
+				CAA744BE24B96639001C55E3 /* Int+Ext.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		CAD279C624B80D1300C6DA41 /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +206,9 @@
 				CAD279D424B8175100C6DA41 /* RootViewController.swift */,
 				CAD279D624B8175A00C6DA41 /* RootPresenter.swift */,
 				CAD279D824B8176900C6DA41 /* RootProtocols.swift */,
+				CAA744B424B9550B001C55E3 /* RepositoriesModel.swift */,
+				CAA744B824B960F2001C55E3 /* RootViewModel.swift */,
+				CAA744BA24B960FA001C55E3 /* RootAdapter.swift */,
 			);
 			path = root;
 			sourceTree = "<group>";
@@ -189,9 +216,11 @@
 		CAD279DA24B8177400C6DA41 /* general */ = {
 			isa = PBXGroup;
 			children = (
+				CAD279D024B816C800C6DA41 /* Protocols.swift */,
 				CAD279CE24B8112100C6DA41 /* Coordinator.swift */,
-				CAD279D024B816C800C6DA41 /* CoordinatorProtocols.swift */,
-				CAD279DD24B81BF300C6DA41 /* UIViewController+Ext.swift */,
+				CAA744AE24B94F86001C55E3 /* Repository.swift */,
+				CAA744B624B95F70001C55E3 /* Decoder.swift */,
+				CAA744C024B96746001C55E3 /* extensions */,
 			);
 			path = general;
 			sourceTree = "<group>";
@@ -384,18 +413,25 @@
 			files = (
 				CAD279E224B81F7300C6DA41 /* Fonts.swift in Sources */,
 				CAD279D924B8176900C6DA41 /* RootProtocols.swift in Sources */,
+				CAA744AF24B94F86001C55E3 /* Repository.swift in Sources */,
 				CAD279D724B8175A00C6DA41 /* RootPresenter.swift in Sources */,
 				CAA744AD24B94979001C55E3 /* RootStatusView.swift in Sources */,
 				CAD279DE24B81BF300C6DA41 /* UIViewController+Ext.swift in Sources */,
 				CAD279D324B8172000C6DA41 /* RootView.swift in Sources */,
-				CAD279D124B816C800C6DA41 /* CoordinatorProtocols.swift in Sources */,
+				CAD279D124B816C800C6DA41 /* Protocols.swift in Sources */,
 				CAD279D524B8175100C6DA41 /* RootViewController.swift in Sources */,
+				CAA744B724B95F70001C55E3 /* Decoder.swift in Sources */,
 				CAD279CD24B80D9800C6DA41 /* Images.swift in Sources */,
 				CAD279CF24B8112100C6DA41 /* Coordinator.swift in Sources */,
+				CAA744B524B9550B001C55E3 /* RepositoriesModel.swift in Sources */,
 				CAD279CB24B80D8600C6DA41 /* LocalizedStrings.swift in Sources */,
+				CAA744BF24B96639001C55E3 /* Int+Ext.swift in Sources */,
 				CA7B2ECD24B80871004BA2D6 /* AppDelegate.swift in Sources */,
 				CA7B2ECF24B80871004BA2D6 /* SceneDelegate.swift in Sources */,
+				CAA744BD24B96465001C55E3 /* UIImageView+Ext.swift in Sources */,
+				CAA744B924B960F2001C55E3 /* RootViewModel.swift in Sources */,
 				CAD279E024B81CE600C6DA41 /* RootViewCell.swift in Sources */,
+				CAA744BB24B960FA001C55E3 /* RootAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

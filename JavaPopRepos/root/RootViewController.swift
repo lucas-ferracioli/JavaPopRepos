@@ -17,9 +17,14 @@ class RootViewController: UIViewController, RootViewControllerType {
     
     override func viewDidLoad() {
         setNavigationControllerLayout(title: LocalizedStrings.appName)
+        presenter.getRepositories()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func show(viewModels: [RootViewModel]) {
+        contentView.show(viewModels: viewModels)
     }
 }

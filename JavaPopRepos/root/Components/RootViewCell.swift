@@ -15,14 +15,14 @@ class RootViewCell: UITableViewCell {
         return imageView
     }()
     
-    private let authorNameLabel: UILabel = {
+    private let usernameLabel: UILabel = {
         let label = UILabel()
         label.font = Fonts.regular16
         label.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         return label
     }()
     
-    private let usernameLabel: UILabel = {
+    private let typeLabel: UILabel = {
         let label = UILabel()
         label.font = Fonts.light12
         return label
@@ -66,8 +66,8 @@ class RootViewCell: UITableViewCell {
     
     private func setupViewHierarchy() {
         containerView.addSubview(profileImageView)
-        containerView.addSubview(authorNameLabel)
         containerView.addSubview(usernameLabel)
+        containerView.addSubview(typeLabel)
         containerView.addSubview(separatorView)
         containerView.addSubview(repoLabel)
         containerView.addSubview(descriptionLabel)
@@ -89,20 +89,20 @@ class RootViewCell: UITableViewCell {
             $0.height.equalTo(100)
         }
         
-        authorNameLabel.snp.makeConstraints {
+        usernameLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(16)
             $0.left.equalTo(profileImageView.snp.right).offset(8)
         }
         
-        usernameLabel.snp.makeConstraints {
-            $0.left.equalTo(authorNameLabel.snp.right).offset(4)
-            $0.centerY.equalTo(authorNameLabel.snp.centerY)
+        typeLabel.snp.makeConstraints {
+            $0.left.equalTo(usernameLabel.snp.right).offset(4)
+            $0.centerY.equalTo(usernameLabel.snp.centerY)
             $0.right.equalToSuperview().inset(16)
         }
         
         separatorView.snp.makeConstraints {
-            $0.top.equalTo(authorNameLabel.snp.bottom).offset(4)
-            $0.left.equalTo(authorNameLabel.snp.left)
+            $0.top.equalTo(usernameLabel.snp.bottom).offset(4)
+            $0.left.equalTo(usernameLabel.snp.left)
             $0.right.equalToSuperview().inset(16)
             $0.height.equalTo(1)
         }
@@ -130,5 +130,15 @@ class RootViewCell: UITableViewCell {
             $0.bottom.equalToSuperview().inset(16)
             $0.right.equalTo(starsView.snp.left).inset(-4)
         }
+    }
+    
+    func setup(viewModel: RootViewModel) {
+        profileImageView.load(url: viewModel.userImage)
+        usernameLabel.text = viewModel.username
+        typeLabel.text = viewModel.userType
+        repoLabel.text = viewModel.repositoryName
+        descriptionLabel.text = viewModel.repositoryDescription
+        forksView.show(icon: Images.iconFork, value: viewModel.numberOfForks)
+        starsView.show(icon: Images.iconStar, value: viewModel.numberOfStars)
     }
 }
