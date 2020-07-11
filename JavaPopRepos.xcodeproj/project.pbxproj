@@ -13,6 +13,7 @@
 		CA7B2ED624B80872004BA2D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA7B2ED524B80872004BA2D6 /* Assets.xcassets */; };
 		CA7B2ED924B80872004BA2D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7B2ED724B80872004BA2D6 /* LaunchScreen.storyboard */; };
 		CA7B2EE424B80873004BA2D6 /* JavaPopReposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B2EE324B80873004BA2D6 /* JavaPopReposTests.swift */; };
+		CA9903B624BA51A4002BB0AC /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903B524BA51A4002BB0AC /* LoadingView.swift */; };
 		CAA744AD24B94979001C55E3 /* RootStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744AC24B94979001C55E3 /* RootStatusView.swift */; };
 		CAA744AF24B94F86001C55E3 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744AE24B94F86001C55E3 /* Repository.swift */; };
 		CAA744B524B9550B001C55E3 /* RepositoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744B424B9550B001C55E3 /* RepositoriesModel.swift */; };
@@ -61,6 +62,7 @@
 		CA7B2EDF24B80873004BA2D6 /* JavaPopReposTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JavaPopReposTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA7B2EE324B80873004BA2D6 /* JavaPopReposTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaPopReposTests.swift; sourceTree = "<group>"; };
 		CA7B2EE524B80873004BA2D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA9903B524BA51A4002BB0AC /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		CAA744AC24B94979001C55E3 /* RootStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootStatusView.swift; sourceTree = "<group>"; };
 		CAA744AE24B94F86001C55E3 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		CAA744B424B9550B001C55E3 /* RepositoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesModel.swift; sourceTree = "<group>"; };
@@ -167,13 +169,21 @@
 			path = JavaPopReposTests;
 			sourceTree = "<group>";
 		};
-		CAA744AB24B940BE001C55E3 /* Components */ = {
+		CA9903B424BA5180002BB0AC /* components */ = {
+			isa = PBXGroup;
+			children = (
+				CA9903B524BA51A4002BB0AC /* LoadingView.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		CAA744AB24B940BE001C55E3 /* components */ = {
 			isa = PBXGroup;
 			children = (
 				CAD279DF24B81CE600C6DA41 /* RootViewCell.swift */,
 				CAA744AC24B94979001C55E3 /* RootStatusView.swift */,
 			);
-			path = Components;
+			path = components;
 			sourceTree = "<group>";
 		};
 		CAA744C024B96746001C55E3 /* extensions */ = {
@@ -201,7 +211,7 @@
 		CAD279C724B80D2F00C6DA41 /* root */ = {
 			isa = PBXGroup;
 			children = (
-				CAA744AB24B940BE001C55E3 /* Components */,
+				CAA744AB24B940BE001C55E3 /* components */,
 				CAD279D224B8172000C6DA41 /* RootView.swift */,
 				CAD279D424B8175100C6DA41 /* RootViewController.swift */,
 				CAD279D624B8175A00C6DA41 /* RootPresenter.swift */,
@@ -220,6 +230,7 @@
 				CAD279CE24B8112100C6DA41 /* Coordinator.swift */,
 				CAA744AE24B94F86001C55E3 /* Repository.swift */,
 				CAA744B624B95F70001C55E3 /* Decoder.swift */,
+				CA9903B424BA5180002BB0AC /* components */,
 				CAA744C024B96746001C55E3 /* extensions */,
 			);
 			path = general;
@@ -414,6 +425,7 @@
 				CAD279E224B81F7300C6DA41 /* Fonts.swift in Sources */,
 				CAD279D924B8176900C6DA41 /* RootProtocols.swift in Sources */,
 				CAA744AF24B94F86001C55E3 /* Repository.swift in Sources */,
+				CA9903B624BA51A4002BB0AC /* LoadingView.swift in Sources */,
 				CAD279D724B8175A00C6DA41 /* RootPresenter.swift in Sources */,
 				CAA744AD24B94979001C55E3 /* RootStatusView.swift in Sources */,
 				CAD279DE24B81BF300C6DA41 /* UIViewController+Ext.swift in Sources */,

@@ -3,5 +3,5 @@ protocol RootViewControllerType: class {
 }
 
 protocol RootPresenterType: class {
-    func getRepositories()
+    func getRepositories(nextPage: Bool)
 }

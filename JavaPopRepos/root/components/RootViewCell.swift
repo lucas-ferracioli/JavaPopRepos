@@ -2,7 +2,7 @@ import UIKit
 import SnapKit
 
 class RootViewCell: UITableViewCell {
-    static let identifier = "root_view_cell"
+    let identifier = "root_view_cell"
     
     private let containerView = UIView()
     
@@ -50,6 +50,8 @@ class RootViewCell: UITableViewCell {
     
     private let starsView = RootStatusView()
     
+    private let loadingView = LoadingView()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
@@ -73,6 +75,7 @@ class RootViewCell: UITableViewCell {
         containerView.addSubview(descriptionLabel)
         containerView.addSubview(forksView)
         containerView.addSubview(starsView)
+        containerView.addSubview(loadingView)
         addSubview(containerView)
     }
     
@@ -130,6 +133,10 @@ class RootViewCell: UITableViewCell {
             $0.bottom.equalToSuperview().inset(16)
             $0.right.equalTo(starsView.snp.left).inset(-4)
         }
+        
+        loadingView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
     
     func setup(viewModel: RootViewModel) {
@@ -140,5 +147,6 @@ class RootViewCell: UITableViewCell {
         descriptionLabel.text = viewModel.repositoryDescription
         forksView.show(icon: Images.iconFork, value: viewModel.numberOfForks)
         starsView.show(icon: Images.iconStar, value: viewModel.numberOfStars)
+        loadingView.setLoading(false)
     }
 }
