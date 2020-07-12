@@ -39,7 +39,7 @@
 		CA9903E724BAB9C1002BB0AC /* RootViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903E624BAB9C1002BB0AC /* RootViewTests.swift */; };
 		CA9903E924BABBA0002BB0AC /* RootAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903E824BABBA0002BB0AC /* RootAdapterTests.swift */; };
 		CA9903EB24BAC63F002BB0AC /* RootViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903EA24BAC63F002BB0AC /* RootViewControllerTests.swift */; };
-		CA9903ED24BAC6F4002BB0AC /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903EC24BAC6F4002BB0AC /* GeneratedMocks.swift */; };
+		CA9E1D3824BBC67A001DB306 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9E1D3724BBC67A001DB306 /* GeneratedMocks.swift */; };
 		CAA744AD24B94979001C55E3 /* RootStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744AC24B94979001C55E3 /* RootStatusView.swift */; };
 		CAA744AF24B94F86001C55E3 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744AE24B94F86001C55E3 /* Repository.swift */; };
 		CAA744B524B9550B001C55E3 /* RepositoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744B424B9550B001C55E3 /* RepositoriesModel.swift */; };
@@ -112,7 +112,7 @@
 		CA9903E624BAB9C1002BB0AC /* RootViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewTests.swift; sourceTree = "<group>"; };
 		CA9903E824BABBA0002BB0AC /* RootAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAdapterTests.swift; sourceTree = "<group>"; };
 		CA9903EA24BAC63F002BB0AC /* RootViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerTests.swift; sourceTree = "<group>"; };
-		CA9903EC24BAC6F4002BB0AC /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		CA9E1D3724BBC67A001DB306 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GeneratedMocks.swift; path = JavaPopReposTests/GeneratedMocks.swift; sourceTree = SOURCE_ROOT; };
 		CAA744AC24B94979001C55E3 /* RootStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootStatusView.swift; sourceTree = "<group>"; };
 		CAA744AE24B94F86001C55E3 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		CAA744B424B9550B001C55E3 /* RepositoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesModel.swift; sourceTree = "<group>"; };
@@ -267,7 +267,7 @@
 		CA9903D324BAA93B002BB0AC /* general */ = {
 			isa = PBXGroup;
 			children = (
-				CA9903EC24BAC6F4002BB0AC /* GeneratedMocks.swift */,
+				CA9E1D3724BBC67A001DB306 /* GeneratedMocks.swift */,
 				CA721C3624BB8A0200A3EE65 /* jsons */,
 				CA9903D424BAA95A002BB0AC /* components */,
 				CA9903DB24BAADC7002BB0AC /* extensions */,
@@ -510,7 +510,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JavaPopReposTests/Pods-JavaPopReposTests-frameworks.sh\"\n\n# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/../root/RootProtocols.swift\" \\\n\"${INPUT_DIR}/../pullRequests/PullRequestProtocols.swift\"\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JavaPopReposTests/Pods-JavaPopReposTests-frameworks.sh\"\n\n# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/root/RootProtocols.swift\" \\\n\"${INPUT_DIR}/pullRequests/PullRequestProtocols.swift\"\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
 			showEnvVarsInLog = 0;
 		};
 		60D8F2E668AEA77599FC19FB /* [CP] Embed Pods Frameworks */ = {
@@ -625,10 +625,10 @@
 				CA9903E924BABBA0002BB0AC /* RootAdapterTests.swift in Sources */,
 				CA9903E524BAB8FC002BB0AC /* RootStatusViewTests.swift in Sources */,
 				CA9903D824BAAB11002BB0AC /* EmptyStateViewTests.swift in Sources */,
-				CA9903ED24BAC6F4002BB0AC /* GeneratedMocks.swift in Sources */,
 				CA9903D624BAA979002BB0AC /* LoadingViewTests.swift in Sources */,
 				CA9903DA24BAABB6002BB0AC /* ErrorStateViewTests.swift in Sources */,
 				CA9903EB24BAC63F002BB0AC /* RootViewControllerTests.swift in Sources */,
+				CA9E1D3824BBC67A001DB306 /* GeneratedMocks.swift in Sources */,
 				CA721C3F24BB933F00A3EE65 /* RootPresenterTests.swift in Sources */,
 				CA721C4624BBBD7200A3EE65 /* PullRequestViewTests.swift in Sources */,
 				CA9903DD24BAADE1002BB0AC /* Double+ExtTests.swift in Sources */,
