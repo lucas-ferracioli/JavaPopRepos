@@ -12,6 +12,7 @@ class PullRequestViewCell: UITableViewCell {
         imageView.layer.borderColor = UIColor.black.cgColor
         imageView.layer.cornerRadius = 4
         imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
