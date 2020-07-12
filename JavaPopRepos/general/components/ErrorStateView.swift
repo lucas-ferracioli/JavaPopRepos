@@ -37,10 +37,10 @@ class ErrorStateView: UIView {
     }
     
     private func setupView() {
+        backgroundColor = .white
         setupViewHierarchy()
         createViewConstraints()
         addActions()
-        backgroundColor = .white
     }
     
     private func setupViewHierarchy() {
