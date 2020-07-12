@@ -20,11 +20,11 @@ struct RootAdapter {
         return description.isEmpty ? LocalizedStrings.noDescription : description
     }
     
-    private func getNumberOfForks(forks: Int) -> String {
+    private func getNumberOfForks(forks: Double) -> String {
         return forks.getFormatted()
     }
     
-    private func getNumberOfStars(stars: Int) -> String {
+    private func getNumberOfStars(stars: Double) -> String {
         return stars.getFormatted()
     }
 }

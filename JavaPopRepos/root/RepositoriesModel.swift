@@ -7,8 +7,8 @@ struct RepositoriesModel: Equatable, Decodable {
 struct Repo: Equatable, Decodable {
     let name: String
     let description: String
-    let stargazersCount: Int
-    let forksCount: Int
+    let stargazersCount: Double
+    let forksCount: Double
     let owner: Owner
 }
 

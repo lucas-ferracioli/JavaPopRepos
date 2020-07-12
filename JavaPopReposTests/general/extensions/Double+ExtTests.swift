@@ -5,19 +5,19 @@ import UIKit
 
 @testable import JavaPopRepos
 
-class IntExtTests: QuickSpec {
+class DoubleExtTests: QuickSpec {
     override func spec() {
         describe("init") {
             it("has no additional character") {
-                expect(10.getFormatted()).to(equal("10"))
+                expect(10.0.getFormatted()).to(equal("10.0"))
             }
             
             it("has K additional character") {
-                expect(10000.getFormatted()).to(equal("10K"))
+                expect(10000.0.getFormatted()).to(equal("10.0K"))
             }
             
             it("has M additional character") {
-                expect(1000000.getFormatted()).to(equal("1M"))
+                expect(1000000.0.getFormatted()).to(equal("1.0M"))
             }
         }
     }

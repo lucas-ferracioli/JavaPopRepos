@@ -1,13 +1,13 @@
 import Foundation
 
-extension Int {
+extension Double {
     func getFormatted() -> String {
         if (0...999).contains(self) {
-            return "\(self)"
+            return String(format: "%.1f", self)
         } else if (1000...999999).contains(self) {
-            return "\(self/1000)K"
+            return String(format: "%.1fK", self/1000)
         } else {
-            return "\(self/1000000)M"
+            return String(format: "%.1fM", self/1000000)
         }
     }
 }
