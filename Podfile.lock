@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (5.2.1)
+  - Cuckoo (1.4.1):
+    - Cuckoo/Swift (= 1.4.1)
+  - Cuckoo/Swift (1.4.1)
   - iOSSnapshotTestCase (6.2.0):
     - iOSSnapshotTestCase/SwiftSupport (= 6.2.0)
   - iOSSnapshotTestCase/Core (6.2.0)
@@ -16,6 +19,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
+  - Cuckoo
   - Nimble
   - Nimble-Snapshots
   - Quick
@@ -24,6 +28,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Cuckoo
     - iOSSnapshotTestCase
     - Nimble
     - Nimble-Snapshots
@@ -32,12 +37,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  Cuckoo: 4625f7f54d9bb880123270e8969898d6c1d036b5
   iOSSnapshotTestCase: 9ab44cb5aa62b84d31847f40680112e15ec579a6
   Nimble: a73af6ecd4c9106f434f3d55fc54570be3739e0b
   Nimble-Snapshots: 7a1133b2dcce853ecdf1026f0a17fedf03bc41c9
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: e4a23b523dec9c52cb1f83d15afe90e13dcb5669
+PODFILE CHECKSUM: e62240f7fa8033157e9be988dfe67ad29e7f370f
 
 COCOAPODS: 1.9.1

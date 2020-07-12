@@ -15,6 +15,7 @@ target 'JavaPopRepos' do
     pod 'Quick'
     pod 'Nimble'
     pod 'Nimble-Snapshots'
+    pod 'Cuckoo'
   end
 
 end
