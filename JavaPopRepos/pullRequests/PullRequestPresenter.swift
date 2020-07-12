@@ -20,7 +20,7 @@ class PullRequestPresenter: PullRequestPresenterType {
                 let viewModels = PullRequestAdapter().adapt(model: model)
                 self.controller?.show(viewModels: viewModels)
             case .failure:
-                print("Error")
+                self.controller?.showError()
             }
         }
     }

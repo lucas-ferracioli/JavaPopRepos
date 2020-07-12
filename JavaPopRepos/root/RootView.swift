@@ -2,6 +2,7 @@ import UIKit
 import SnapKit
 
 class RootView: UIView {
+    var didRequestAgain: (() -> Void)?
     var didRequestNextPage: (() -> Void)?
     var didSelectRow: ((_ viewModel: RootViewModel) -> Void)?
     
@@ -11,10 +12,9 @@ class RootView: UIView {
         }
     }
     
-    private let tableView: UITableView = {
-        let tableView = UITableView()
-        return tableView
-    }()
+    private let tableView =  UITableView()
+    
+    private let errorStateView = ErrorStateView()
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -29,6 +29,8 @@ class RootView: UIView {
         setupTableView()
         setupViewHierarchy()
         createViewConstraints()
+        bind()
+        errorStateView.isHidden = true
     }
     
     private func setupTableView() {
@@ -40,16 +42,33 @@ class RootView: UIView {
     
     private func setupViewHierarchy() {
         addSubview(tableView)
+        addSubview(errorStateView)
     }
     
     private func createViewConstraints() {
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+        
+        errorStateView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+    }
+    
+    private func bind() {
+        errorStateView.didTryAgain = { [weak self] in
+            self?.didRequestAgain?()
+            self?.errorStateView.isHidden = true
+        }
     }
     
     func show(viewModels: [RootViewModel]) {
         self.viewModels += viewModels
+        errorStateView.isHidden = true
+    }
+    
+    func showError() {
+        errorStateView.isHidden = false
     }
 }
 

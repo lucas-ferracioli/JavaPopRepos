@@ -23,6 +23,8 @@
 		CA9903C824BA6823002BB0AC /* PullRequestsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903C724BA6823002BB0AC /* PullRequestsModel.swift */; };
 		CA9903CA24BA6B12002BB0AC /* PullRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903C924BA6B12002BB0AC /* PullRequestPresenter.swift */; };
 		CA9903CE24BA8634002BB0AC /* DateAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903CD24BA8634002BB0AC /* DateAdapter.swift */; };
+		CA9903D024BA904F002BB0AC /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903CF24BA904F002BB0AC /* EmptyStateView.swift */; };
+		CA9903D224BA9497002BB0AC /* ErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903D124BA9497002BB0AC /* ErrorStateView.swift */; };
 		CAA744AD24B94979001C55E3 /* RootStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744AC24B94979001C55E3 /* RootStatusView.swift */; };
 		CAA744AF24B94F86001C55E3 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744AE24B94F86001C55E3 /* Repository.swift */; };
 		CAA744B524B9550B001C55E3 /* RepositoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744B424B9550B001C55E3 /* RepositoriesModel.swift */; };
@@ -81,6 +83,8 @@
 		CA9903C724BA6823002BB0AC /* PullRequestsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsModel.swift; sourceTree = "<group>"; };
 		CA9903C924BA6B12002BB0AC /* PullRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestPresenter.swift; sourceTree = "<group>"; };
 		CA9903CD24BA8634002BB0AC /* DateAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAdapter.swift; sourceTree = "<group>"; };
+		CA9903CF24BA904F002BB0AC /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		CA9903D124BA9497002BB0AC /* ErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateView.swift; sourceTree = "<group>"; };
 		CAA744AC24B94979001C55E3 /* RootStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootStatusView.swift; sourceTree = "<group>"; };
 		CAA744AE24B94F86001C55E3 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		CAA744B424B9550B001C55E3 /* RepositoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesModel.swift; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				CA9903B524BA51A4002BB0AC /* LoadingView.swift */,
+				CA9903CF24BA904F002BB0AC /* EmptyStateView.swift */,
+				CA9903D124BA9497002BB0AC /* ErrorStateView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -491,6 +497,8 @@
 				CA9903BF24BA6544002BB0AC /* PullRequestProtocols.swift in Sources */,
 				CA7B2ECD24B80871004BA2D6 /* AppDelegate.swift in Sources */,
 				CA9903C224BA67D5002BB0AC /* PullRequestViewCell.swift in Sources */,
+				CA9903D024BA904F002BB0AC /* EmptyStateView.swift in Sources */,
+				CA9903D224BA9497002BB0AC /* ErrorStateView.swift in Sources */,
 				CA7B2ECF24B80871004BA2D6 /* SceneDelegate.swift in Sources */,
 				CAA744BD24B96465001C55E3 /* UIImageView+Ext.swift in Sources */,
 				CAA744B924B960F2001C55E3 /* RootViewModel.swift in Sources */,

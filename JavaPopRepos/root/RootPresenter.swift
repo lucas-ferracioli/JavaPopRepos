@@ -14,7 +14,7 @@ class RootPresenter: RootPresenterType {
                 let viewModels = RootAdapter().adapt(model: model)
                 self.controller?.show(viewModels: viewModels)
             case .failure:
-                print("Erro")
+                self.controller?.showError()
             }
         }
     }

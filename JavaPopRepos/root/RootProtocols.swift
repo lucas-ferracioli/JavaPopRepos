@@ -1,5 +1,6 @@
 protocol RootViewControllerType: class {
     func show(viewModels: [RootViewModel])
+    func showError()
 }
 
 protocol RootPresenterType: class {

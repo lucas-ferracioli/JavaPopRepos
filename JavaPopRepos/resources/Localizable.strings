@@ -1,3 +1,17 @@
 // General
 "appName" = "JavaPopRepos";
 "pullRequests" = "Pull Requests";
+
+// Empty State
+"noData" = "No available data";
+
+// Error State
+"errorDescription" = "The operation couldn't be completed.\nPlease try again.";
+"tryAgain" = "Try again";
+
+// Root
+"noDescription" = "No description";
+
+// Pull Requests
+"createdAt" = "Created at";
+"noBody" = "No body";

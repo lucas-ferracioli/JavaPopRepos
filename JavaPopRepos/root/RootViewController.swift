@@ -28,6 +28,10 @@ class RootViewController: UIViewController, RootViewControllerType {
     }
     
     private func bind() {
+        contentView.didRequestAgain = { [weak self] in
+            self?.presenter.getRepositories(nextPage: false)
+        }
+        
         contentView.didRequestNextPage = { [weak self] in
             self?.presenter.getRepositories(nextPage: true)
         }
@@ -39,5 +43,9 @@ class RootViewController: UIViewController, RootViewControllerType {
     
     func show(viewModels: [RootViewModel]) {
         contentView.show(viewModels: viewModels)
+    }
+    
+    func showError() {
+        contentView.showError()
     }
 }

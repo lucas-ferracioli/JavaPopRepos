@@ -24,7 +24,17 @@ class PullRequestViewController: UIViewController, PullRequestViewControllerType
         fatalError("init(coder:) has not been implemented")
     }
     
+    private func bind() {
+        contentView.didRequestAgain = { [weak self] in
+            self?.presenter.getPullRequests()
+        }
+    }
+    
     func show(viewModels: [PullRequestViewModel]) {
         contentView.show(viewModels: viewModels)
+    }
+    
+    func showError() {
+        contentView.showError()
     }
 }

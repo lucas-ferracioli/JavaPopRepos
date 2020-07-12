@@ -8,12 +8,16 @@ struct RootAdapter {
                                           userImage: item.owner.avatarUrl,
                                           userType: item.owner.type,
                                           repositoryName: item.name,
-                                          repositoryDescription: item.description,
+                                          repositoryDescription: getRepositoryDescription(description: item.description),
                                           numberOfForks: getNumberOfForks(forks: item.forksCount),
                                           numberOfStars: getNumberOfStars(stars: item.stargazersCount))
             viewModels.append(viewModel)
         }
         return viewModels
+    }
+    
+    private func getRepositoryDescription(description: String) -> String {
+        return description.isEmpty ? LocalizedStrings.noDescription : description
     }
     
     private func getNumberOfForks(forks: Int) -> String {
