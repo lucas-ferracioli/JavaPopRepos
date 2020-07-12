@@ -3,7 +3,7 @@ import Alamofire
 
 enum Requests {
     case repositories(String)
-    case pullRequests
+    case pullRequests(String, String)
 }
 
 class Repository: RepositoryType {
@@ -11,8 +11,8 @@ class Repository: RepositoryType {
         switch request {
         case .repositories(let page):
             return "https://api.github.com/search/repositories?q=language:Java&sort=stars&page=\(page)"
-        case .pullRequests:
-            return ""
+        case .pullRequests(let user, let repo):
+            return "https://api.github.com/repos/\(user)/\(repo)/pulls"
         }
     }
     
@@ -21,6 +21,20 @@ class Repository: RepositoryType {
             switch response.result {
             case .success(let data):
                 guard let data = data, let object = try? Decoder().decode(RepositoriesModel.self, from: data) else {
+                    return
+                }
+                completion(.success(object))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func requestPullRequests(user: String, repository: String, completion: @escaping (Result<[PullRequest], Error>) -> Void) {
+        AF.request(getPath(.pullRequests(user, repository))).response { response in
+            switch response.result {
+            case .success(let data):
+                guard let data = data, let object = try? Decoder().decode([PullRequest].self, from: data) else {
                     return
                 }
                 completion(.success(object))

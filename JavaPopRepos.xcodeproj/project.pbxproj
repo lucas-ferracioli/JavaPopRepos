@@ -14,6 +14,15 @@
 		CA7B2ED924B80872004BA2D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7B2ED724B80872004BA2D6 /* LaunchScreen.storyboard */; };
 		CA7B2EE424B80873004BA2D6 /* JavaPopReposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B2EE324B80873004BA2D6 /* JavaPopReposTests.swift */; };
 		CA9903B624BA51A4002BB0AC /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903B524BA51A4002BB0AC /* LoadingView.swift */; };
+		CA9903BB24BA64DF002BB0AC /* PullRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903BA24BA64DF002BB0AC /* PullRequestView.swift */; };
+		CA9903BD24BA6529002BB0AC /* PullRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903BC24BA6529002BB0AC /* PullRequestViewController.swift */; };
+		CA9903BF24BA6544002BB0AC /* PullRequestProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903BE24BA6544002BB0AC /* PullRequestProtocols.swift */; };
+		CA9903C224BA67D5002BB0AC /* PullRequestViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903C124BA67D5002BB0AC /* PullRequestViewCell.swift */; };
+		CA9903C424BA6804002BB0AC /* PullRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903C324BA6804002BB0AC /* PullRequestViewModel.swift */; };
+		CA9903C624BA680E002BB0AC /* PullRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903C524BA680E002BB0AC /* PullRequestAdapter.swift */; };
+		CA9903C824BA6823002BB0AC /* PullRequestsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903C724BA6823002BB0AC /* PullRequestsModel.swift */; };
+		CA9903CA24BA6B12002BB0AC /* PullRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903C924BA6B12002BB0AC /* PullRequestPresenter.swift */; };
+		CA9903CE24BA8634002BB0AC /* DateAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903CD24BA8634002BB0AC /* DateAdapter.swift */; };
 		CAA744AD24B94979001C55E3 /* RootStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744AC24B94979001C55E3 /* RootStatusView.swift */; };
 		CAA744AF24B94F86001C55E3 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744AE24B94F86001C55E3 /* Repository.swift */; };
 		CAA744B524B9550B001C55E3 /* RepositoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744B424B9550B001C55E3 /* RepositoriesModel.swift */; };
@@ -63,6 +72,15 @@
 		CA7B2EE324B80873004BA2D6 /* JavaPopReposTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaPopReposTests.swift; sourceTree = "<group>"; };
 		CA7B2EE524B80873004BA2D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA9903B524BA51A4002BB0AC /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		CA9903BA24BA64DF002BB0AC /* PullRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestView.swift; sourceTree = "<group>"; };
+		CA9903BC24BA6529002BB0AC /* PullRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestViewController.swift; sourceTree = "<group>"; };
+		CA9903BE24BA6544002BB0AC /* PullRequestProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestProtocols.swift; sourceTree = "<group>"; };
+		CA9903C124BA67D5002BB0AC /* PullRequestViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestViewCell.swift; sourceTree = "<group>"; };
+		CA9903C324BA6804002BB0AC /* PullRequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestViewModel.swift; sourceTree = "<group>"; };
+		CA9903C524BA680E002BB0AC /* PullRequestAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestAdapter.swift; sourceTree = "<group>"; };
+		CA9903C724BA6823002BB0AC /* PullRequestsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsModel.swift; sourceTree = "<group>"; };
+		CA9903C924BA6B12002BB0AC /* PullRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestPresenter.swift; sourceTree = "<group>"; };
+		CA9903CD24BA8634002BB0AC /* DateAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAdapter.swift; sourceTree = "<group>"; };
 		CAA744AC24B94979001C55E3 /* RootStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootStatusView.swift; sourceTree = "<group>"; };
 		CAA744AE24B94F86001C55E3 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		CAA744B424B9550B001C55E3 /* RepositoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesModel.swift; sourceTree = "<group>"; };
@@ -155,6 +173,7 @@
 				CA7B2EDA24B80872004BA2D6 /* Info.plist */,
 				CAD279DA24B8177400C6DA41 /* general */,
 				CAD279C724B80D2F00C6DA41 /* root */,
+				CA9903B924BA64A6002BB0AC /* pullRequests */,
 				CAD279C624B80D1300C6DA41 /* resources */,
 			);
 			path = JavaPopRepos;
@@ -173,6 +192,29 @@
 			isa = PBXGroup;
 			children = (
 				CA9903B524BA51A4002BB0AC /* LoadingView.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		CA9903B924BA64A6002BB0AC /* pullRequests */ = {
+			isa = PBXGroup;
+			children = (
+				CA9903C024BA67C7002BB0AC /* components */,
+				CA9903BA24BA64DF002BB0AC /* PullRequestView.swift */,
+				CA9903BC24BA6529002BB0AC /* PullRequestViewController.swift */,
+				CA9903C924BA6B12002BB0AC /* PullRequestPresenter.swift */,
+				CA9903BE24BA6544002BB0AC /* PullRequestProtocols.swift */,
+				CA9903C324BA6804002BB0AC /* PullRequestViewModel.swift */,
+				CA9903C524BA680E002BB0AC /* PullRequestAdapter.swift */,
+				CA9903C724BA6823002BB0AC /* PullRequestsModel.swift */,
+			);
+			path = pullRequests;
+			sourceTree = "<group>";
+		};
+		CA9903C024BA67C7002BB0AC /* components */ = {
+			isa = PBXGroup;
+			children = (
+				CA9903C124BA67D5002BB0AC /* PullRequestViewCell.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -230,6 +272,7 @@
 				CAD279CE24B8112100C6DA41 /* Coordinator.swift */,
 				CAA744AE24B94F86001C55E3 /* Repository.swift */,
 				CAA744B624B95F70001C55E3 /* Decoder.swift */,
+				CA9903CD24BA8634002BB0AC /* DateAdapter.swift */,
 				CA9903B424BA5180002BB0AC /* components */,
 				CAA744C024B96746001C55E3 /* extensions */,
 			);
@@ -423,13 +466,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAD279E224B81F7300C6DA41 /* Fonts.swift in Sources */,
+				CA9903BB24BA64DF002BB0AC /* PullRequestView.swift in Sources */,
 				CAD279D924B8176900C6DA41 /* RootProtocols.swift in Sources */,
 				CAA744AF24B94F86001C55E3 /* Repository.swift in Sources */,
+				CA9903C824BA6823002BB0AC /* PullRequestsModel.swift in Sources */,
 				CA9903B624BA51A4002BB0AC /* LoadingView.swift in Sources */,
 				CAD279D724B8175A00C6DA41 /* RootPresenter.swift in Sources */,
+				CA9903C624BA680E002BB0AC /* PullRequestAdapter.swift in Sources */,
 				CAA744AD24B94979001C55E3 /* RootStatusView.swift in Sources */,
+				CA9903CA24BA6B12002BB0AC /* PullRequestPresenter.swift in Sources */,
+				CA9903BD24BA6529002BB0AC /* PullRequestViewController.swift in Sources */,
+				CA9903CE24BA8634002BB0AC /* DateAdapter.swift in Sources */,
 				CAD279DE24B81BF300C6DA41 /* UIViewController+Ext.swift in Sources */,
 				CAD279D324B8172000C6DA41 /* RootView.swift in Sources */,
+				CA9903C424BA6804002BB0AC /* PullRequestViewModel.swift in Sources */,
 				CAD279D124B816C800C6DA41 /* Protocols.swift in Sources */,
 				CAD279D524B8175100C6DA41 /* RootViewController.swift in Sources */,
 				CAA744B724B95F70001C55E3 /* Decoder.swift in Sources */,
@@ -438,7 +488,9 @@
 				CAA744B524B9550B001C55E3 /* RepositoriesModel.swift in Sources */,
 				CAD279CB24B80D8600C6DA41 /* LocalizedStrings.swift in Sources */,
 				CAA744BF24B96639001C55E3 /* Int+Ext.swift in Sources */,
+				CA9903BF24BA6544002BB0AC /* PullRequestProtocols.swift in Sources */,
 				CA7B2ECD24B80871004BA2D6 /* AppDelegate.swift in Sources */,
+				CA9903C224BA67D5002BB0AC /* PullRequestViewCell.swift in Sources */,
 				CA7B2ECF24B80871004BA2D6 /* SceneDelegate.swift in Sources */,
 				CAA744BD24B96465001C55E3 /* UIImageView+Ext.swift in Sources */,
 				CAA744B924B960F2001C55E3 /* RootViewModel.swift in Sources */,

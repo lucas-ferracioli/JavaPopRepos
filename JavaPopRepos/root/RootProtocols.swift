@@ -5,3 +5,7 @@ protocol RootViewControllerType: class {
 protocol RootPresenterType: class {
     func getRepositories(nextPage: Bool)
 }
+
+protocol RootDelegate: AnyObject {
+    func showPullRequests(viewModel: RootViewModel)
+}

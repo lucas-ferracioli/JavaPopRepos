@@ -5,6 +5,7 @@ class LocalizedStrings {
     
     //General
     static let appName = localized(forKey: "appName")
+    static let pullRequests = localized(forKey: "pullRequests")
 }
 
 private extension LocalizedStrings {

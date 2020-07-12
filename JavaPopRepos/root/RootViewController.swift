@@ -1,6 +1,8 @@
 import UIKit
 
 class RootViewController: UIViewController, RootViewControllerType {
+    weak var delegate: RootDelegate?
+    
     private let contentView: RootView
     private let presenter: RootPresenterType
     
@@ -28,6 +30,10 @@ class RootViewController: UIViewController, RootViewControllerType {
     private func bind() {
         contentView.didRequestNextPage = { [weak self] in
             self?.presenter.getRepositories(nextPage: true)
+        }
+        
+        contentView.didSelectRow = { [weak self] viewModel in
+            self?.delegate?.showPullRequests(viewModel: viewModel)
         }
     }
     

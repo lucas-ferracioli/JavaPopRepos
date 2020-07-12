@@ -1,11 +1,8 @@
 import UIKit
 import SnapKit
 
-class RootView: UIView {
-    var didRequestNextPage: (() -> Void)?
-    var didSelectRow: ((_ viewModel: RootViewModel) -> Void)?
-    
-    private var viewModels: [RootViewModel] = [] {
+class PullRequestView: UIView {
+    private var viewModels: [PullRequestViewModel] = [] {
         didSet {
             tableView.reloadData()
         }
@@ -32,10 +29,10 @@ class RootView: UIView {
     }
     
     private func setupTableView() {
-        tableView.register(RootViewCell.self, forCellReuseIdentifier: RootViewCell().identifier)
+        tableView.register(PullRequestViewCell.self, forCellReuseIdentifier: PullRequestViewCell().identifier)
+        tableView.allowsSelection = false
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.prefetchDataSource = self
     }
     
     private func setupViewHierarchy() {
@@ -48,35 +45,19 @@ class RootView: UIView {
         }
     }
     
-    func show(viewModels: [RootViewModel]) {
+    func show(viewModels: [PullRequestViewModel]) {
         self.viewModels += viewModels
     }
 }
 
-extension RootView: UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching {
+extension PullRequestView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModels.isEmpty ? 10 : viewModels.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: RootViewCell().identifier, for: indexPath) as? RootViewCell
-        cell?.selectedBackgroundView = UIView()
+        let cell = tableView.dequeueReusableCell(withIdentifier: PullRequestViewCell().identifier, for: indexPath) as? PullRequestViewCell
         if !viewModels.isEmpty { cell?.setup(viewModel: viewModels[indexPath.row]) }
         return cell ?? UITableViewCell()
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        didSelectRow?(viewModels[indexPath.row])
-    }
-    
-    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        if indexPaths.contains(where: isLastCell(for:)) {
-            didRequestNextPage?()
-        }
-    }
-    
-    private func isLastCell(for indexPath: IndexPath) -> Bool {
-        let count = viewModels.count
-        return indexPath.row >= count - 1
     }
 }
