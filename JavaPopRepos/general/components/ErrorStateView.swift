@@ -53,6 +53,8 @@ class ErrorStateView: UIView {
     private func createViewConstraints() {
         containerView.snp.makeConstraints {
             $0.center.equalToSuperview()
+            $0.left.equalToSuperview()
+            $0.right.equalToSuperview()
         }
         
         iconImageView.snp.makeConstraints {
@@ -67,6 +69,7 @@ class ErrorStateView: UIView {
         
         tryAgainButton.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(8)
+            $0.bottom.equalToSuperview()
             $0.centerX.equalToSuperview()
         }
     }

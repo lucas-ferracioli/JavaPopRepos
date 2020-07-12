@@ -50,6 +50,7 @@ class EmptyStateView: UIView {
         
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(iconImageView.snp.bottom).offset(8)
+            $0.bottom.equalToSuperview()
             $0.centerX.equalToSuperview()
         }
     }
