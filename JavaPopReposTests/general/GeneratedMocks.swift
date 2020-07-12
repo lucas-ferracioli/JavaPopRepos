@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: JavaPopRepos/root/RootProtocols.swift at 2020-07-12 18:39:09 +0000
+// MARK: - Mocks generated from file: JavaPopRepos/root/RootProtocols.swift at 2020-07-12 18:04:54 +0000
 
 
 import Cuckoo

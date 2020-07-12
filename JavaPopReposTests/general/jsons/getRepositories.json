@@ -1,0 +1,48 @@
+{
+    "items": [
+        {
+            "name": "test-one",
+            "description": "Any description to first test.",
+            "stargazers_count": 105895,
+            "forks_count": 34514,
+            "owner": {
+                "login": "user_test1",
+                "avatar_url": "https://userpictest.com",
+                "type": "User"
+            }
+        },
+        {
+            "name": "test-two",
+            "description": "Any description to second test.",
+            "stargazers_count": 153,
+            "forks_count": 1098879,
+            "owner": {
+                "login": "user_test2",
+                "avatar_url": "https://userpictest.com",
+                "type": "Organization"
+            }
+        },
+        {
+            "name": "test-three",
+            "description": "Any description to third test.",
+            "stargazers_count": 19,
+            "forks_count": 4,
+            "owner": {
+                "login": "user_test3",
+                "avatar_url": "https://userpictest.com",
+                "type": "User"
+            }
+        },
+        {
+            "name": "test-four",
+            "description": "Any description to forth test.",
+            "stargazers_count": 890,
+            "forks_count": 10000,
+            "owner": {
+                "login": "user_test4",
+                "avatar_url": "https://userpictest.com",
+                "type": "User"
+            }
+        }
+    ]
+}

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5AFB6B87240FEEDDE9674220 /* Pods_JavaPopReposTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44917322066791EECD83CDA /* Pods_JavaPopReposTests.framework */; };
+		CA721C3B24BB903C00A3EE65 /* getRepositories.json in Resources */ = {isa = PBXBuildFile; fileRef = CA721C3A24BB903C00A3EE65 /* getRepositories.json */; };
+		CA721C3D24BB913800A3EE65 /* getRepositories.json in Resources */ = {isa = PBXBuildFile; fileRef = CA721C3A24BB903C00A3EE65 /* getRepositories.json */; };
 		CA7B2ECD24B80871004BA2D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B2ECC24B80871004BA2D6 /* AppDelegate.swift */; };
 		CA7B2ECF24B80871004BA2D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B2ECE24B80871004BA2D6 /* SceneDelegate.swift */; };
 		CA7B2ED624B80872004BA2D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA7B2ED524B80872004BA2D6 /* Assets.xcassets */; };
@@ -72,6 +74,7 @@
 		7F5A824EB686424948B7D101 /* Pods_JavaPopRepos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JavaPopRepos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B985BB09BE9F1B45F37F7372 /* Pods-JavaPopReposTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JavaPopReposTests.release.xcconfig"; path = "Target Support Files/Pods-JavaPopReposTests/Pods-JavaPopReposTests.release.xcconfig"; sourceTree = "<group>"; };
 		C2CC20871573B1F3F3D0A5EB /* Pods-JavaPopRepos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JavaPopRepos.release.xcconfig"; path = "Target Support Files/Pods-JavaPopRepos/Pods-JavaPopRepos.release.xcconfig"; sourceTree = "<group>"; };
+		CA721C3A24BB903C00A3EE65 /* getRepositories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getRepositories.json; sourceTree = "<group>"; };
 		CA7B2EC924B80871004BA2D6 /* JavaPopRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JavaPopRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA7B2ECC24B80871004BA2D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA7B2ECE24B80871004BA2D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +167,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CA721C3624BB8A0200A3EE65 /* jsons */ = {
+			isa = PBXGroup;
+			children = (
+				CA721C3A24BB903C00A3EE65 /* getRepositories.json */,
+			);
+			path = jsons;
+			sourceTree = "<group>";
+		};
 		CA7B2EC024B80871004BA2D6 = {
 			isa = PBXGroup;
 			children = (
@@ -202,7 +213,6 @@
 		CA7B2EE224B80873004BA2D6 /* JavaPopReposTests */ = {
 			isa = PBXGroup;
 			children = (
-				CA9903EC24BAC6F4002BB0AC /* GeneratedMocks.swift */,
 				CA9903D324BAA93B002BB0AC /* general */,
 				CA9903DE24BAAEC5002BB0AC /* root */,
 				CA9903DF24BAAECA002BB0AC /* pullRequests */,
@@ -247,6 +257,8 @@
 		CA9903D324BAA93B002BB0AC /* general */ = {
 			isa = PBXGroup;
 			children = (
+				CA9903EC24BAC6F4002BB0AC /* GeneratedMocks.swift */,
+				CA721C3624BB8A0200A3EE65 /* jsons */,
 				CA9903D424BAA95A002BB0AC /* components */,
 				CA9903DB24BAADC7002BB0AC /* extensions */,
 			);
@@ -452,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA7B2ED924B80872004BA2D6 /* LaunchScreen.storyboard in Resources */,
+				CA721C3D24BB913800A3EE65 /* getRepositories.json in Resources */,
 				CAD279C924B80D4E00C6DA41 /* Localizable.strings in Resources */,
 				CA7B2ED624B80872004BA2D6 /* Assets.xcassets in Resources */,
 			);
@@ -461,6 +474,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA721C3B24BB903C00A3EE65 /* getRepositories.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

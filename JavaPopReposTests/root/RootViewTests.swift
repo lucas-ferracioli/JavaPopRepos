@@ -18,14 +18,7 @@ class RootViewTests: QuickSpec {
         describe("init") {
             context("has valid viewModels") {
                 beforeEach {
-                    let viewModel = RootViewModel(username: "test-user",
-                                                  userImage: URL(string: "https://testurl.com")!,
-                                                  userType: "User",
-                                                  repositoryName: "TestRepository",
-                                                  repositoryDescription: "This is any description.",
-                                                  numberOfForks: "100K",
-                                                  numberOfStars: "5M")
-                    viewModels = [viewModel, viewModel, viewModel, viewModel, viewModel]
+                    viewModels = self.loadJson()
                 }
                 
                 it("has a valid snapshot") {
@@ -47,5 +40,18 @@ class RootViewTests: QuickSpec {
                 }
             }
         }
+    }
+    
+    func loadJson() -> [RootViewModel] {
+        if let path = Bundle.main.path(forResource: "getRepositories", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonObject = try Decoder().decode(RepositoriesModel.self, from: data)
+                return RootAdapter().adapt(model: jsonObject)
+            } catch {
+                return [RootViewModel]()
+            }
+        }
+        return [RootViewModel]()
     }
 }

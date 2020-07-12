@@ -9,7 +9,7 @@ class DoubleExtTests: QuickSpec {
     override func spec() {
         describe("init") {
             it("has no additional character") {
-                expect(10.0.getFormatted()).to(equal("10.0"))
+                expect(10.0.getFormatted()).to(equal("10"))
             }
             
             it("has K additional character") {
