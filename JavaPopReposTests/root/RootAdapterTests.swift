@@ -1,5 +1,4 @@
 import Nimble
-import Nimble_Snapshots
 import Quick
 import UIKit
 

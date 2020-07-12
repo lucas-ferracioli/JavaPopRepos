@@ -1,4 +1,256 @@
-// MARK: - Mocks generated from file: JavaPopRepos/pullRequests/PullRequestProtocols.swift at 2020-07-12 22:29:27 +0000
+// MARK: - Mocks generated from file: JavaPopRepos/general/Protocols.swift at 2020-07-12 22:56:48 +0000
+
+
+import Cuckoo
+@testable import JavaPopRepos
+
+import UIKit
+
+
+ class MockCoordinatorType: CoordinatorType, Cuckoo.ProtocolMock {
+    
+     typealias MocksType = CoordinatorType
+    
+     typealias Stubbing = __StubbingProxy_CoordinatorType
+     typealias Verification = __VerificationProxy_CoordinatorType
+
+     let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: false)
+
+    
+    private var __defaultImplStub: CoordinatorType?
+
+     func enableDefaultImplementation(_ stub: CoordinatorType) {
+        __defaultImplStub = stub
+        cuckoo_manager.enableDefaultStubImplementation()
+    }
+    
+
+    
+    
+    
+     var navigationController: UINavigationController? {
+        get {
+            return cuckoo_manager.getter("navigationController",
+                superclassCall:
+                    
+                    Cuckoo.MockManager.crashOnProtocolSuperclassCall()
+                    ,
+                defaultCall: __defaultImplStub!.navigationController)
+        }
+        
+    }
+    
+
+    
+
+    
+    
+    
+     func start()  {
+        
+    return cuckoo_manager.call("start()",
+            parameters: (),
+            escapingParameters: (),
+            superclassCall:
+                
+                Cuckoo.MockManager.crashOnProtocolSuperclassCall()
+                ,
+            defaultCall: __defaultImplStub!.start())
+        
+    }
+    
+
+	 struct __StubbingProxy_CoordinatorType: Cuckoo.StubbingProxy {
+	    private let cuckoo_manager: Cuckoo.MockManager
+	
+	     init(manager: Cuckoo.MockManager) {
+	        self.cuckoo_manager = manager
+	    }
+	    
+	    
+	    var navigationController: Cuckoo.ProtocolToBeStubbedReadOnlyProperty<MockCoordinatorType, UINavigationController?> {
+	        return .init(manager: cuckoo_manager, name: "navigationController")
+	    }
+	    
+	    
+	    func start() -> Cuckoo.ProtocolStubNoReturnFunction<()> {
+	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+	        return .init(stub: cuckoo_manager.createStub(for: MockCoordinatorType.self, method: "start()", parameterMatchers: matchers))
+	    }
+	    
+	}
+
+	 struct __VerificationProxy_CoordinatorType: Cuckoo.VerificationProxy {
+	    private let cuckoo_manager: Cuckoo.MockManager
+	    private let callMatcher: Cuckoo.CallMatcher
+	    private let sourceLocation: Cuckoo.SourceLocation
+	
+	     init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+	        self.cuckoo_manager = manager
+	        self.callMatcher = callMatcher
+	        self.sourceLocation = sourceLocation
+	    }
+	
+	    
+	    
+	    var navigationController: Cuckoo.VerifyReadOnlyProperty<UINavigationController?> {
+	        return .init(manager: cuckoo_manager, name: "navigationController", callMatcher: callMatcher, sourceLocation: sourceLocation)
+	    }
+	    
+	
+	    
+	    @discardableResult
+	    func start() -> Cuckoo.__DoNotUse<(), Void> {
+	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+	        return cuckoo_manager.verify("start()", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    }
+	    
+	}
+}
+
+ class CoordinatorTypeStub: CoordinatorType {
+    
+    
+     var navigationController: UINavigationController? {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (UINavigationController?).self)
+        }
+        
+    }
+    
+
+    
+
+    
+     func start()   {
+        return DefaultValueRegistry.defaultValue(for: (Void).self)
+    }
+    
+}
+
+
+
+ class MockRepositoryType: RepositoryType, Cuckoo.ProtocolMock {
+    
+     typealias MocksType = RepositoryType
+    
+     typealias Stubbing = __StubbingProxy_RepositoryType
+     typealias Verification = __VerificationProxy_RepositoryType
+
+     let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: false)
+
+    
+    private var __defaultImplStub: RepositoryType?
+
+     func enableDefaultImplementation(_ stub: RepositoryType) {
+        __defaultImplStub = stub
+        cuckoo_manager.enableDefaultStubImplementation()
+    }
+    
+
+    
+
+    
+
+    
+    
+    
+     func requestRepositories(page: String, completion: @escaping (Result<RepositoriesModel, Error>) -> Void)  {
+        
+    return cuckoo_manager.call("requestRepositories(page: String, completion: @escaping (Result<RepositoriesModel, Error>) -> Void)",
+            parameters: (page, completion),
+            escapingParameters: (page, completion),
+            superclassCall:
+                
+                Cuckoo.MockManager.crashOnProtocolSuperclassCall()
+                ,
+            defaultCall: __defaultImplStub!.requestRepositories(page: page, completion: completion))
+        
+    }
+    
+    
+    
+     func requestPullRequests(user: String, repository: String, completion: @escaping (Result<[PullRequest], Error>) -> Void)  {
+        
+    return cuckoo_manager.call("requestPullRequests(user: String, repository: String, completion: @escaping (Result<[PullRequest], Error>) -> Void)",
+            parameters: (user, repository, completion),
+            escapingParameters: (user, repository, completion),
+            superclassCall:
+                
+                Cuckoo.MockManager.crashOnProtocolSuperclassCall()
+                ,
+            defaultCall: __defaultImplStub!.requestPullRequests(user: user, repository: repository, completion: completion))
+        
+    }
+    
+
+	 struct __StubbingProxy_RepositoryType: Cuckoo.StubbingProxy {
+	    private let cuckoo_manager: Cuckoo.MockManager
+	
+	     init(manager: Cuckoo.MockManager) {
+	        self.cuckoo_manager = manager
+	    }
+	    
+	    
+	    func requestRepositories<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(page: M1, completion: M2) -> Cuckoo.ProtocolStubNoReturnFunction<(String, (Result<RepositoriesModel, Error>) -> Void)> where M1.MatchedType == String, M2.MatchedType == (Result<RepositoriesModel, Error>) -> Void {
+	        let matchers: [Cuckoo.ParameterMatcher<(String, (Result<RepositoriesModel, Error>) -> Void)>] = [wrap(matchable: page) { $0.0 }, wrap(matchable: completion) { $0.1 }]
+	        return .init(stub: cuckoo_manager.createStub(for: MockRepositoryType.self, method: "requestRepositories(page: String, completion: @escaping (Result<RepositoriesModel, Error>) -> Void)", parameterMatchers: matchers))
+	    }
+	    
+	    func requestPullRequests<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable, M3: Cuckoo.Matchable>(user: M1, repository: M2, completion: M3) -> Cuckoo.ProtocolStubNoReturnFunction<(String, String, (Result<[PullRequest], Error>) -> Void)> where M1.MatchedType == String, M2.MatchedType == String, M3.MatchedType == (Result<[PullRequest], Error>) -> Void {
+	        let matchers: [Cuckoo.ParameterMatcher<(String, String, (Result<[PullRequest], Error>) -> Void)>] = [wrap(matchable: user) { $0.0 }, wrap(matchable: repository) { $0.1 }, wrap(matchable: completion) { $0.2 }]
+	        return .init(stub: cuckoo_manager.createStub(for: MockRepositoryType.self, method: "requestPullRequests(user: String, repository: String, completion: @escaping (Result<[PullRequest], Error>) -> Void)", parameterMatchers: matchers))
+	    }
+	    
+	}
+
+	 struct __VerificationProxy_RepositoryType: Cuckoo.VerificationProxy {
+	    private let cuckoo_manager: Cuckoo.MockManager
+	    private let callMatcher: Cuckoo.CallMatcher
+	    private let sourceLocation: Cuckoo.SourceLocation
+	
+	     init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+	        self.cuckoo_manager = manager
+	        self.callMatcher = callMatcher
+	        self.sourceLocation = sourceLocation
+	    }
+	
+	    
+	
+	    
+	    @discardableResult
+	    func requestRepositories<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(page: M1, completion: M2) -> Cuckoo.__DoNotUse<(String, (Result<RepositoriesModel, Error>) -> Void), Void> where M1.MatchedType == String, M2.MatchedType == (Result<RepositoriesModel, Error>) -> Void {
+	        let matchers: [Cuckoo.ParameterMatcher<(String, (Result<RepositoriesModel, Error>) -> Void)>] = [wrap(matchable: page) { $0.0 }, wrap(matchable: completion) { $0.1 }]
+	        return cuckoo_manager.verify("requestRepositories(page: String, completion: @escaping (Result<RepositoriesModel, Error>) -> Void)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    }
+	    
+	    @discardableResult
+	    func requestPullRequests<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable, M3: Cuckoo.Matchable>(user: M1, repository: M2, completion: M3) -> Cuckoo.__DoNotUse<(String, String, (Result<[PullRequest], Error>) -> Void), Void> where M1.MatchedType == String, M2.MatchedType == String, M3.MatchedType == (Result<[PullRequest], Error>) -> Void {
+	        let matchers: [Cuckoo.ParameterMatcher<(String, String, (Result<[PullRequest], Error>) -> Void)>] = [wrap(matchable: user) { $0.0 }, wrap(matchable: repository) { $0.1 }, wrap(matchable: completion) { $0.2 }]
+	        return cuckoo_manager.verify("requestPullRequests(user: String, repository: String, completion: @escaping (Result<[PullRequest], Error>) -> Void)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    }
+	    
+	}
+}
+
+ class RepositoryTypeStub: RepositoryType {
+    
+
+    
+
+    
+     func requestRepositories(page: String, completion: @escaping (Result<RepositoriesModel, Error>) -> Void)   {
+        return DefaultValueRegistry.defaultValue(for: (Void).self)
+    }
+    
+     func requestPullRequests(user: String, repository: String, completion: @escaping (Result<[PullRequest], Error>) -> Void)   {
+        return DefaultValueRegistry.defaultValue(for: (Void).self)
+    }
+    
+}
+
+
+// MARK: - Mocks generated from file: JavaPopRepos/pullRequests/PullRequestProtocols.swift at 2020-07-12 22:56:48 +0000
 
 
 import Cuckoo
@@ -216,7 +468,7 @@ import Cuckoo
 }
 
 
-// MARK: - Mocks generated from file: JavaPopRepos/root/RootProtocols.swift at 2020-07-12 22:29:27 +0000
+// MARK: - Mocks generated from file: JavaPopRepos/root/RootProtocols.swift at 2020-07-12 22:56:48 +0000
 
 
 import Cuckoo

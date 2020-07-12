@@ -40,6 +40,9 @@
 		CA9903E924BABBA0002BB0AC /* RootAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903E824BABBA0002BB0AC /* RootAdapterTests.swift */; };
 		CA9903EB24BAC63F002BB0AC /* RootViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9903EA24BAC63F002BB0AC /* RootViewControllerTests.swift */; };
 		CA9E1D3824BBC67A001DB306 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9E1D3724BBC67A001DB306 /* GeneratedMocks.swift */; };
+		CA9E1D3A24BBC6E9001DB306 /* PullRequestViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9E1D3924BBC6E9001DB306 /* PullRequestViewControllerTests.swift */; };
+		CA9E1D3C24BBC807001DB306 /* PullRequestAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9E1D3B24BBC807001DB306 /* PullRequestAdapterTests.swift */; };
+		CA9E1D3E24BBC9FE001DB306 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9E1D3D24BBC9FE001DB306 /* CoordinatorTests.swift */; };
 		CAA744AD24B94979001C55E3 /* RootStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744AC24B94979001C55E3 /* RootStatusView.swift */; };
 		CAA744AF24B94F86001C55E3 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744AE24B94F86001C55E3 /* Repository.swift */; };
 		CAA744B524B9550B001C55E3 /* RepositoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744B424B9550B001C55E3 /* RepositoriesModel.swift */; };
@@ -113,6 +116,9 @@
 		CA9903E824BABBA0002BB0AC /* RootAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAdapterTests.swift; sourceTree = "<group>"; };
 		CA9903EA24BAC63F002BB0AC /* RootViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerTests.swift; sourceTree = "<group>"; };
 		CA9E1D3724BBC67A001DB306 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GeneratedMocks.swift; path = JavaPopReposTests/GeneratedMocks.swift; sourceTree = SOURCE_ROOT; };
+		CA9E1D3924BBC6E9001DB306 /* PullRequestViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestViewControllerTests.swift; sourceTree = "<group>"; };
+		CA9E1D3B24BBC807001DB306 /* PullRequestAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestAdapterTests.swift; sourceTree = "<group>"; };
+		CA9E1D3D24BBC9FE001DB306 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
 		CAA744AC24B94979001C55E3 /* RootStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootStatusView.swift; sourceTree = "<group>"; };
 		CAA744AE24B94F86001C55E3 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		CAA744B424B9550B001C55E3 /* RepositoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesModel.swift; sourceTree = "<group>"; };
@@ -268,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				CA9E1D3724BBC67A001DB306 /* GeneratedMocks.swift */,
+				CA9E1D3D24BBC9FE001DB306 /* CoordinatorTests.swift */,
 				CA721C3624BB8A0200A3EE65 /* jsons */,
 				CA9903D424BAA95A002BB0AC /* components */,
 				CA9903DB24BAADC7002BB0AC /* extensions */,
@@ -310,6 +317,8 @@
 			children = (
 				CA9903E124BAAEE0002BB0AC /* components */,
 				CA721C4524BBBD7200A3EE65 /* PullRequestViewTests.swift */,
+				CA9E1D3924BBC6E9001DB306 /* PullRequestViewControllerTests.swift */,
+				CA9E1D3B24BBC807001DB306 /* PullRequestAdapterTests.swift */,
 			);
 			path = pullRequests;
 			sourceTree = "<group>";
@@ -510,7 +519,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JavaPopReposTests/Pods-JavaPopReposTests-frameworks.sh\"\n\n# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/root/RootProtocols.swift\" \\\n\"${INPUT_DIR}/pullRequests/PullRequestProtocols.swift\"\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JavaPopReposTests/Pods-JavaPopReposTests-frameworks.sh\"\n\n# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/general/Protocols.swift\" \\\n\"${INPUT_DIR}/root/RootProtocols.swift\" \\\n\"${INPUT_DIR}/pullRequests/PullRequestProtocols.swift\"\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
 			showEnvVarsInLog = 0;
 		};
 		60D8F2E668AEA77599FC19FB /* [CP] Embed Pods Frameworks */ = {
@@ -629,7 +638,10 @@
 				CA9903DA24BAABB6002BB0AC /* ErrorStateViewTests.swift in Sources */,
 				CA9903EB24BAC63F002BB0AC /* RootViewControllerTests.swift in Sources */,
 				CA9E1D3824BBC67A001DB306 /* GeneratedMocks.swift in Sources */,
+				CA9E1D3A24BBC6E9001DB306 /* PullRequestViewControllerTests.swift in Sources */,
 				CA721C3F24BB933F00A3EE65 /* RootPresenterTests.swift in Sources */,
+				CA9E1D3C24BBC807001DB306 /* PullRequestAdapterTests.swift in Sources */,
+				CA9E1D3E24BBC9FE001DB306 /* CoordinatorTests.swift in Sources */,
 				CA721C4624BBBD7200A3EE65 /* PullRequestViewTests.swift in Sources */,
 				CA9903DD24BAADE1002BB0AC /* Double+ExtTests.swift in Sources */,
 				CA721C4124BB950B00A3EE65 /* PullRequestViewCellTests.swift in Sources */,
