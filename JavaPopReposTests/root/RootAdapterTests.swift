@@ -21,6 +21,8 @@ class RootAdapterTests: QuickSpec {
                 expect(viewModels.first?.repositoryDescription).to(equal("Any description to first test."))
                 expect(viewModels.first?.numberOfForks).to(equal("34.5K"))
                 expect(viewModels.first?.numberOfStars).to(equal("105.9K"))
+                expect(viewModels.first?.accessibilityForksLabel).to(equal("Number of forks: 34514"))
+                expect(viewModels.first?.accessibilityStarsLabel).to(equal("Number of stars: 105895"))
             }
         }
     }

@@ -2,8 +2,6 @@ import UIKit
 import SnapKit
 
 class PullRequestViewCell: UITableViewCell {
-    let identifier = "pull_request_view_cell"
-    
     private let containerView = UIView()
     
     private let profileImageView: UIImageView = {
@@ -20,12 +18,14 @@ class PullRequestViewCell: UITableViewCell {
         let label = UILabel()
         label.font = Fonts.regular16
         label.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        label.isAccessibilityElement = true
         return label
     }()
     
     private let dateLabel: UILabel = {
         let label = UILabel()
         label.font = Fonts.light12
+        label.isAccessibilityElement = true
         return label
     }()
     
@@ -38,12 +38,14 @@ class PullRequestViewCell: UITableViewCell {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = Fonts.bold16
+        label.isAccessibilityElement = true
         return label
     }()
     
     private let bodyLabel: UILabel = {
         let label = UILabel()
         label.font = Fonts.light12
+        label.isAccessibilityElement = true
         return label
     }()
     

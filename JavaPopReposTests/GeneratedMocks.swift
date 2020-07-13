@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: JavaPopRepos/general/Protocols.swift at 2020-07-13 02:23:01 +0000
+// MARK: - Mocks generated from file: JavaPopRepos/general/Protocols.swift at 2020-07-13 03:36:24 +0000
 
 
 import Cuckoo
@@ -250,7 +250,7 @@ import UIKit
 }
 
 
-// MARK: - Mocks generated from file: JavaPopRepos/pullRequests/PullRequestProtocols.swift at 2020-07-13 02:23:01 +0000
+// MARK: - Mocks generated from file: JavaPopRepos/pullRequests/PullRequestProtocols.swift at 2020-07-13 03:36:24 +0000
 
 
 import Cuckoo
@@ -468,7 +468,7 @@ import Cuckoo
 }
 
 
-// MARK: - Mocks generated from file: JavaPopRepos/root/RootProtocols.swift at 2020-07-13 02:23:01 +0000
+// MARK: - Mocks generated from file: JavaPopRepos/root/RootProtocols.swift at 2020-07-13 03:36:24 +0000
 
 
 import Cuckoo

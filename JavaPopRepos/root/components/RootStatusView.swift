@@ -17,6 +17,7 @@ class RootStatusView: UIView {
     private let valueLabel: UILabel = {
         let label = UILabel()
         label.font = Fonts.bold16
+        label.isAccessibilityElement = true
         return label
     }()
     
@@ -46,8 +47,9 @@ class RootStatusView: UIView {
         }
     }
     
-    func show(icon: UIImage, value: String) {
+    func show(icon: UIImage, value: String, accessibilityLabel: String) {
         iconImageView.image = icon
         valueLabel.text = value
+        valueLabel.accessibilityLabel = accessibilityLabel
     }
 }

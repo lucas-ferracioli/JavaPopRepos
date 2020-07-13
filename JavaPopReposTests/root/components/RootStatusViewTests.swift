@@ -16,7 +16,7 @@ class RootStatusViewTests: QuickSpec {
         
         describe("init") {
             it("has a valid snapshot") {
-                view.show(icon: Images.iconFork, value: "10K")
+                view.show(icon: Images.iconFork, value: "10K", accessibilityLabel: "Number of starts: 10000")
                 expect(view) == snapshot()
             }
         }

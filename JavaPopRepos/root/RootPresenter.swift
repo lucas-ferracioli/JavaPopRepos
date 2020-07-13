@@ -1,7 +1,7 @@
 class RootPresenter: RootPresenterType {
     weak var controller: RootViewControllerType?
     private let repository: RepositoryType
-    private let currentPage: Int = 1
+    private var currentPage: Int = 1
     
     init(repository: RepositoryType = Repository()) {
         self.repository = repository
@@ -20,6 +20,9 @@ class RootPresenter: RootPresenterType {
     }
     
     private func getPage(nextPage: Bool) -> String {
-        return nextPage ? "\(currentPage + 1)" : "\(currentPage)"
+        if nextPage {
+            currentPage = currentPage + 1
+        }
+        return "\(currentPage)"
     }
 }

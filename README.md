@@ -4,7 +4,7 @@
 This project was developed with CocoaPods. Firstly, you need to run `pod install` to build.
 
 ## FRAMEWORKS:
-### Tests (86% of coverage): 
+### Tests: 
 * Quick and Nimble.
 * Nimble-Snapshot.
 * Cuckoo.
@@ -17,3 +17,6 @@ This project was developed with CocoaPods. Firstly, you need to run `pod install
 
 ## DESIGN PATTERN:
 This project was designed with a custom MVP (Model View Presenter), including: Coordinator, Repository and View Model (to manage data).
+
+## TESTS
+This project has 86% of test coverage. You must run the tests on `iPhone 8` simulator.

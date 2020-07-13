@@ -11,7 +11,11 @@
 
 // Root
 "noDescription" = "No description";
+"rootCellIdentifier" = "root_view_cell";
+"numberOfStars" = "Number of stars:";
+"numberOfForks" = "Number of forks:";
 
 // Pull Requests
 "createdAt" = "Created at";
 "noBody" = "No body";
+"pullRequestCellIdentifier" = "pull_request_view_cell";

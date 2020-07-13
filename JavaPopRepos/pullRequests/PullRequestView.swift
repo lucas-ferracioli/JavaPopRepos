@@ -10,6 +10,12 @@ class PullRequestView: UIView {
         }
     }
     
+    private let stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        return stackView
+    }()
+    
     private let tableView: UITableView = {
         let tableView = UITableView()
         return tableView
@@ -38,28 +44,21 @@ class PullRequestView: UIView {
     }
     
     private func setupTableView() {
-        tableView.register(PullRequestViewCell.self, forCellReuseIdentifier: PullRequestViewCell().identifier)
+        tableView.register(PullRequestViewCell.self, forCellReuseIdentifier: LocalizedStrings.pullRequestCellIdentifier)
         tableView.allowsSelection = false
         tableView.delegate = self
         tableView.dataSource = self
     }
     
     private func setupViewHierarchy() {
-        addSubview(tableView)
-        addSubview(emptyStateView)
-        addSubview(errorStateView)
+        stackView.addArrangedSubview(tableView)
+        stackView.addArrangedSubview(emptyStateView)
+        stackView.addArrangedSubview(errorStateView)
+        addSubview(stackView)
     }
     
     private func createViewConstraints() {
-        tableView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
-        
-        emptyStateView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
-        
-        errorStateView.snp.makeConstraints {
+        stackView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
     }
@@ -74,6 +73,9 @@ class PullRequestView: UIView {
     private func setEmptyView(viewModels: [PullRequestViewModel]) {
         if viewModels.isEmpty {
             emptyStateView.isHidden = false
+            tableView.isHidden = true
+        } else {
+            tableView.isHidden = false
         }
     }
     
@@ -84,6 +86,7 @@ class PullRequestView: UIView {
     }
     
     func showError() {
+        tableView.isHidden = true
         emptyStateView.isHidden = true
         errorStateView.isHidden = false
     }
@@ -95,7 +98,7 @@ extension PullRequestView: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: PullRequestViewCell().identifier, for: indexPath) as? PullRequestViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: LocalizedStrings.pullRequestCellIdentifier, for: indexPath) as? PullRequestViewCell
         if !viewModels.isEmpty { cell?.setup(viewModel: viewModels[indexPath.row]) }
         return cell ?? UITableViewCell()
     }

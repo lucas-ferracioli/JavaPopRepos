@@ -14,6 +14,7 @@ class EmptyStateView: UIView {
         label.font = Fonts.regular16
         label.text = LocalizedStrings.noData
         label.textAlignment = .center
+        label.isAccessibilityElement = true
         return label
     }()
     

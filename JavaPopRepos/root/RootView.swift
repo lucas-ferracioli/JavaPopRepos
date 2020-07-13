@@ -12,6 +12,12 @@ class RootView: UIView {
         }
     }
     
+    private let stackView: UIStackView = {
+       let stackView = UIStackView()
+        stackView.axis = .vertical
+        return stackView
+    }()
+    
     private let tableView =  UITableView()
     
     private let errorStateView = ErrorStateView()
@@ -34,7 +40,7 @@ class RootView: UIView {
     }
     
     private func setupTableView() {
-        tableView.register(RootViewCell.self, forCellReuseIdentifier: RootViewCell().identifier)
+        tableView.register(RootViewCell.self, forCellReuseIdentifier: LocalizedStrings.rootCellIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.prefetchDataSource = self
@@ -64,11 +70,13 @@ class RootView: UIView {
     
     func show(viewModels: [RootViewModel]) {
         self.viewModels += viewModels
+        tableView.isHidden = false
         errorStateView.isHidden = true
     }
     
     func showError() {
         errorStateView.isHidden = false
+        tableView.isHidden = true
     }
 }
 
@@ -78,7 +86,7 @@ extension RootView: UITableViewDelegate, UITableViewDataSource, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: RootViewCell().identifier, for: indexPath) as? RootViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: LocalizedStrings.rootCellIdentifier, for: indexPath) as? RootViewCell
         cell?.selectedBackgroundView = UIView()
         if !viewModels.isEmpty { cell?.setup(viewModel: viewModels[indexPath.row]) }
         return cell ?? UITableViewCell()

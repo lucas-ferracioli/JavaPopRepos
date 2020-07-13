@@ -2,8 +2,6 @@ import UIKit
 import SnapKit
 
 class RootViewCell: UITableViewCell {
-    let identifier = "root_view_cell"
-    
     private let containerView = UIView()
     
     private let profileImageView: UIImageView = {
@@ -20,12 +18,14 @@ class RootViewCell: UITableViewCell {
         let label = UILabel()
         label.font = Fonts.regular16
         label.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        label.isAccessibilityElement = true
         return label
     }()
     
     private let typeLabel: UILabel = {
         let label = UILabel()
         label.font = Fonts.light12
+        label.isAccessibilityElement = false
         return label
     }()
     
@@ -38,12 +38,14 @@ class RootViewCell: UITableViewCell {
     private let repoLabel: UILabel = {
         let label = UILabel()
         label.font = Fonts.bold20
+        label.isAccessibilityElement = true
         return label
     }()
     
     private let descriptionLabel: UILabel = {
         let label = UILabel()
         label.font = Fonts.light12
+        label.isAccessibilityElement = true
         return label
     }()
     
@@ -146,8 +148,8 @@ class RootViewCell: UITableViewCell {
         typeLabel.text = viewModel.userType
         repoLabel.text = viewModel.repositoryName
         descriptionLabel.text = viewModel.repositoryDescription
-        forksView.show(icon: Images.iconFork, value: viewModel.numberOfForks)
-        starsView.show(icon: Images.iconStar, value: viewModel.numberOfStars)
+        forksView.show(icon: Images.iconFork, value: viewModel.numberOfForks, accessibilityLabel: viewModel.accessibilityForksLabel)
+        starsView.show(icon: Images.iconStar, value: viewModel.numberOfStars, accessibilityLabel: viewModel.accessibilityStarsLabel)
         loadingView.setLoading(false)
     }
 }

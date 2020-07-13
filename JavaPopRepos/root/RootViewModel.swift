@@ -8,4 +8,6 @@ struct RootViewModel {
     let repositoryDescription: String
     let numberOfForks: String
     let numberOfStars: String
+    let accessibilityForksLabel: String
+    let accessibilityStarsLabel: String
 }
