@@ -18,6 +18,7 @@ class PullRequestViewController: UIViewController, PullRequestViewControllerType
     override func viewDidLoad() {
         setNavigationControllerLayout(title: LocalizedStrings.pullRequests)
         presenter.getPullRequests()
+        bind()
     }
     
     required init?(coder: NSCoder) {

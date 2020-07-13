@@ -16,7 +16,7 @@ class Repository: RepositoryType {
         }
     }
     
-    func requestRepositories(page: String, completion: @escaping (Result<RepositoriesModel, Error>) -> Void) {
+    func requestRepositories(page: String, completion: @escaping (Result<RepositoriesModel, ErrorCode>) -> Void) {
         AF.request(getPath(.repositories(page))).response { response in
             switch response.result {
             case .success(let data):
@@ -24,13 +24,13 @@ class Repository: RepositoryType {
                     return
                 }
                 completion(.success(object))
-            case .failure(let error):
-                completion(.failure(error))
+            case .failure( _):
+                completion(.failure(.genericError))
             }
         }
     }
     
-    func requestPullRequests(user: String, repository: String, completion: @escaping (Result<[PullRequest], Error>) -> Void) {
+    func requestPullRequests(user: String, repository: String, completion: @escaping (Result<[PullRequest], ErrorCode>) -> Void) {
         AF.request(getPath(.pullRequests(user, repository))).response { response in
             switch response.result {
             case .success(let data):
@@ -38,8 +38,8 @@ class Repository: RepositoryType {
                     return
                 }
                 completion(.success(object))
-            case .failure(let error):
-                completion(.failure(error))
+            case .failure( _):
+                completion(.failure(.genericError))
             }
         }
     }

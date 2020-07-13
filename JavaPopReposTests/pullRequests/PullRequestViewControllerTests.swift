@@ -37,7 +37,7 @@ class PullRequestViewControllerTests: QuickSpec {
             
             it("#didRequestAgain") {
                 view.didRequestAgain?()
-                verify(mockPresenter).getPullRequests()
+                verify(mockPresenter, times(2)).getPullRequests()
             }
         }
     }

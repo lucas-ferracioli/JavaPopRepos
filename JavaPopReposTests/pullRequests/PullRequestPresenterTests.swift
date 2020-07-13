@@ -4,16 +4,16 @@ import Cuckoo
 
 @testable import JavaPopRepos
 
-class RootPresenterTests: QuickSpec {
+class PullRequestPresenterTests: QuickSpec {
     override func spec() {
-        var mockController: MockRootViewControllerType!
+        var mockController: MockPullRequestViewControllerType!
         var mockRepository: MockRepositoryType!
-        var presenter: RootPresenter!
+        var presenter: PullRequestPresenter!
         
         beforeEach {
             mockRepository = MockRepositoryType()
-            presenter = RootPresenter(repository: mockRepository)
-            mockController = MockRootViewControllerType()
+            presenter = PullRequestPresenter(repository: mockRepository, username: "", repositoryName: "")
+            mockController = MockPullRequestViewControllerType()
             presenter.controller = mockController
             
             stub(mockController) { stub in
@@ -22,11 +22,11 @@ class RootPresenterTests: QuickSpec {
             }
         }
         
-        describe("#getRepositories") {
+        describe("#getPullRequests") {
             context("get success") {
                 beforeEach {
                     stub(mockRepository) { stub in
-                        stub.requestRepositories(page: any(), completion: any()).then { (_, result) in
+                        stub.requestPullRequests(user: any(), repository: any(), completion: any()).then { (_, _, result) in
                             let data = self.loadJson()
                             result(.success(data!))
                         }
@@ -34,7 +34,7 @@ class RootPresenterTests: QuickSpec {
                 }
                 
                 it("call #show method") {
-                    presenter.getRepositories(nextPage: false)
+                    presenter.getPullRequests()
                     verify(mockController).show(viewModels: any())
                 }
             }
@@ -42,25 +42,25 @@ class RootPresenterTests: QuickSpec {
             context("get failure") {
                 beforeEach {
                     stub(mockRepository) { stub in
-                        stub.requestRepositories(page: any(), completion: any()).then { (_, result) in
-                            result(.failure(ErrorCode.genericError))
+                        stub.requestPullRequests(user: any(), repository: any(), completion: any()).then { (_, _, result) in
+                            result(.failure(.genericError))
                         }
                     }
                 }
                 
                 it("call #showError method") {
-                    presenter.getRepositories(nextPage: false)
+                    presenter.getPullRequests()
                     verify(mockController).showError()
                 }
             }
         }
     }
     
-    func loadJson() -> RepositoriesModel? {
-        if let path = Bundle.main.path(forResource: "getRepositories", ofType: "json") {
+    func loadJson() -> [PullRequest]? {
+        if let path = Bundle.main.path(forResource: "getPullRequests", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let jsonObject = try Decoder().decode(RepositoriesModel.self, from: data)
+                let jsonObject = try Decoder().decode([PullRequest].self, from: data)
                 return jsonObject
             } catch {
                 return nil

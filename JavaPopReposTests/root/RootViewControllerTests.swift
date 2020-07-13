@@ -53,16 +53,23 @@ class RootViewControllerTests: QuickSpec {
             }
             
             it("#didSelectRow") {
-                let viewModel = RootViewModel(username: "",
-                                              userImage: URL(string: "https://testurl.com")!,
-                                              userType: "",
-                                              repositoryName: "",
-                                              repositoryDescription: "",
-                                              numberOfForks: "",
-                                              numberOfStars: "")
+                let viewModel = self.loadJson().first!
                 view.didSelectRow?(viewModel)
                 verify(mockDelegate).showPullRequests(viewModel: any())
             }
         }
+    }
+    
+    func loadJson() -> [RootViewModel] {
+        if let path = Bundle.main.path(forResource: "getRepositories", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonObject = try Decoder().decode(RepositoriesModel.self, from: data)
+                return RootAdapter().adapt(model: jsonObject)
+            } catch {
+                return [RootViewModel]()
+            }
+        }
+        return [RootViewModel]()
     }
 }

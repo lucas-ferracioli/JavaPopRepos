@@ -43,6 +43,8 @@
 		CA9E1D3A24BBC6E9001DB306 /* PullRequestViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9E1D3924BBC6E9001DB306 /* PullRequestViewControllerTests.swift */; };
 		CA9E1D3C24BBC807001DB306 /* PullRequestAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9E1D3B24BBC807001DB306 /* PullRequestAdapterTests.swift */; };
 		CA9E1D3E24BBC9FE001DB306 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9E1D3D24BBC9FE001DB306 /* CoordinatorTests.swift */; };
+		CA9E1D4224BBF63D001DB306 /* ErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9E1D4124BBF63D001DB306 /* ErrorCode.swift */; };
+		CA9E1D4424BBF7F3001DB306 /* PullRequestPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9E1D4324BBF7F3001DB306 /* PullRequestPresenterTests.swift */; };
 		CAA744AD24B94979001C55E3 /* RootStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744AC24B94979001C55E3 /* RootStatusView.swift */; };
 		CAA744AF24B94F86001C55E3 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744AE24B94F86001C55E3 /* Repository.swift */; };
 		CAA744B524B9550B001C55E3 /* RepositoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA744B424B9550B001C55E3 /* RepositoriesModel.swift */; };
@@ -119,6 +121,8 @@
 		CA9E1D3924BBC6E9001DB306 /* PullRequestViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestViewControllerTests.swift; sourceTree = "<group>"; };
 		CA9E1D3B24BBC807001DB306 /* PullRequestAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestAdapterTests.swift; sourceTree = "<group>"; };
 		CA9E1D3D24BBC9FE001DB306 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		CA9E1D4124BBF63D001DB306 /* ErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCode.swift; sourceTree = "<group>"; };
+		CA9E1D4324BBF7F3001DB306 /* PullRequestPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestPresenterTests.swift; sourceTree = "<group>"; };
 		CAA744AC24B94979001C55E3 /* RootStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootStatusView.swift; sourceTree = "<group>"; };
 		CAA744AE24B94F86001C55E3 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		CAA744B424B9550B001C55E3 /* RepositoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesModel.swift; sourceTree = "<group>"; };
@@ -319,6 +323,7 @@
 				CA721C4524BBBD7200A3EE65 /* PullRequestViewTests.swift */,
 				CA9E1D3924BBC6E9001DB306 /* PullRequestViewControllerTests.swift */,
 				CA9E1D3B24BBC807001DB306 /* PullRequestAdapterTests.swift */,
+				CA9E1D4324BBF7F3001DB306 /* PullRequestPresenterTests.swift */,
 			);
 			path = pullRequests;
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 				CAA744AE24B94F86001C55E3 /* Repository.swift */,
 				CAA744B624B95F70001C55E3 /* Decoder.swift */,
 				CA9903CD24BA8634002BB0AC /* DateAdapter.swift */,
+				CA9E1D4124BBF63D001DB306 /* ErrorCode.swift */,
 				CA9903B424BA5180002BB0AC /* components */,
 				CAA744C024B96746001C55E3 /* extensions */,
 			);
@@ -613,6 +619,7 @@
 				CAA744B524B9550B001C55E3 /* RepositoriesModel.swift in Sources */,
 				CAD279CB24B80D8600C6DA41 /* LocalizedStrings.swift in Sources */,
 				CAA744BF24B96639001C55E3 /* Double+Ext.swift in Sources */,
+				CA9E1D4224BBF63D001DB306 /* ErrorCode.swift in Sources */,
 				CA9903BF24BA6544002BB0AC /* PullRequestProtocols.swift in Sources */,
 				CA7B2ECD24B80871004BA2D6 /* AppDelegate.swift in Sources */,
 				CA9903C224BA67D5002BB0AC /* PullRequestViewCell.swift in Sources */,
@@ -641,6 +648,7 @@
 				CA9E1D3A24BBC6E9001DB306 /* PullRequestViewControllerTests.swift in Sources */,
 				CA721C3F24BB933F00A3EE65 /* RootPresenterTests.swift in Sources */,
 				CA9E1D3C24BBC807001DB306 /* PullRequestAdapterTests.swift in Sources */,
+				CA9E1D4424BBF7F3001DB306 /* PullRequestPresenterTests.swift in Sources */,
 				CA9E1D3E24BBC9FE001DB306 /* CoordinatorTests.swift in Sources */,
 				CA721C4624BBBD7200A3EE65 /* PullRequestViewTests.swift in Sources */,
 				CA9903DD24BAADE1002BB0AC /* Double+ExtTests.swift in Sources */,

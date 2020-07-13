@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: JavaPopRepos/general/Protocols.swift at 2020-07-12 22:56:48 +0000
+// MARK: - Mocks generated from file: JavaPopRepos/general/Protocols.swift at 2020-07-13 02:23:01 +0000
 
 
 import Cuckoo
@@ -155,9 +155,9 @@ import UIKit
     
     
     
-     func requestRepositories(page: String, completion: @escaping (Result<RepositoriesModel, Error>) -> Void)  {
+     func requestRepositories(page: String, completion: @escaping (Result<RepositoriesModel, ErrorCode>) -> Void)  {
         
-    return cuckoo_manager.call("requestRepositories(page: String, completion: @escaping (Result<RepositoriesModel, Error>) -> Void)",
+    return cuckoo_manager.call("requestRepositories(page: String, completion: @escaping (Result<RepositoriesModel, ErrorCode>) -> Void)",
             parameters: (page, completion),
             escapingParameters: (page, completion),
             superclassCall:
@@ -170,9 +170,9 @@ import UIKit
     
     
     
-     func requestPullRequests(user: String, repository: String, completion: @escaping (Result<[PullRequest], Error>) -> Void)  {
+     func requestPullRequests(user: String, repository: String, completion: @escaping (Result<[PullRequest], ErrorCode>) -> Void)  {
         
-    return cuckoo_manager.call("requestPullRequests(user: String, repository: String, completion: @escaping (Result<[PullRequest], Error>) -> Void)",
+    return cuckoo_manager.call("requestPullRequests(user: String, repository: String, completion: @escaping (Result<[PullRequest], ErrorCode>) -> Void)",
             parameters: (user, repository, completion),
             escapingParameters: (user, repository, completion),
             superclassCall:
@@ -192,14 +192,14 @@ import UIKit
 	    }
 	    
 	    
-	    func requestRepositories<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(page: M1, completion: M2) -> Cuckoo.ProtocolStubNoReturnFunction<(String, (Result<RepositoriesModel, Error>) -> Void)> where M1.MatchedType == String, M2.MatchedType == (Result<RepositoriesModel, Error>) -> Void {
-	        let matchers: [Cuckoo.ParameterMatcher<(String, (Result<RepositoriesModel, Error>) -> Void)>] = [wrap(matchable: page) { $0.0 }, wrap(matchable: completion) { $0.1 }]
-	        return .init(stub: cuckoo_manager.createStub(for: MockRepositoryType.self, method: "requestRepositories(page: String, completion: @escaping (Result<RepositoriesModel, Error>) -> Void)", parameterMatchers: matchers))
+	    func requestRepositories<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(page: M1, completion: M2) -> Cuckoo.ProtocolStubNoReturnFunction<(String, (Result<RepositoriesModel, ErrorCode>) -> Void)> where M1.MatchedType == String, M2.MatchedType == (Result<RepositoriesModel, ErrorCode>) -> Void {
+	        let matchers: [Cuckoo.ParameterMatcher<(String, (Result<RepositoriesModel, ErrorCode>) -> Void)>] = [wrap(matchable: page) { $0.0 }, wrap(matchable: completion) { $0.1 }]
+	        return .init(stub: cuckoo_manager.createStub(for: MockRepositoryType.self, method: "requestRepositories(page: String, completion: @escaping (Result<RepositoriesModel, ErrorCode>) -> Void)", parameterMatchers: matchers))
 	    }
 	    
-	    func requestPullRequests<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable, M3: Cuckoo.Matchable>(user: M1, repository: M2, completion: M3) -> Cuckoo.ProtocolStubNoReturnFunction<(String, String, (Result<[PullRequest], Error>) -> Void)> where M1.MatchedType == String, M2.MatchedType == String, M3.MatchedType == (Result<[PullRequest], Error>) -> Void {
-	        let matchers: [Cuckoo.ParameterMatcher<(String, String, (Result<[PullRequest], Error>) -> Void)>] = [wrap(matchable: user) { $0.0 }, wrap(matchable: repository) { $0.1 }, wrap(matchable: completion) { $0.2 }]
-	        return .init(stub: cuckoo_manager.createStub(for: MockRepositoryType.self, method: "requestPullRequests(user: String, repository: String, completion: @escaping (Result<[PullRequest], Error>) -> Void)", parameterMatchers: matchers))
+	    func requestPullRequests<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable, M3: Cuckoo.Matchable>(user: M1, repository: M2, completion: M3) -> Cuckoo.ProtocolStubNoReturnFunction<(String, String, (Result<[PullRequest], ErrorCode>) -> Void)> where M1.MatchedType == String, M2.MatchedType == String, M3.MatchedType == (Result<[PullRequest], ErrorCode>) -> Void {
+	        let matchers: [Cuckoo.ParameterMatcher<(String, String, (Result<[PullRequest], ErrorCode>) -> Void)>] = [wrap(matchable: user) { $0.0 }, wrap(matchable: repository) { $0.1 }, wrap(matchable: completion) { $0.2 }]
+	        return .init(stub: cuckoo_manager.createStub(for: MockRepositoryType.self, method: "requestPullRequests(user: String, repository: String, completion: @escaping (Result<[PullRequest], ErrorCode>) -> Void)", parameterMatchers: matchers))
 	    }
 	    
 	}
@@ -219,15 +219,15 @@ import UIKit
 	
 	    
 	    @discardableResult
-	    func requestRepositories<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(page: M1, completion: M2) -> Cuckoo.__DoNotUse<(String, (Result<RepositoriesModel, Error>) -> Void), Void> where M1.MatchedType == String, M2.MatchedType == (Result<RepositoriesModel, Error>) -> Void {
-	        let matchers: [Cuckoo.ParameterMatcher<(String, (Result<RepositoriesModel, Error>) -> Void)>] = [wrap(matchable: page) { $0.0 }, wrap(matchable: completion) { $0.1 }]
-	        return cuckoo_manager.verify("requestRepositories(page: String, completion: @escaping (Result<RepositoriesModel, Error>) -> Void)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    func requestRepositories<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(page: M1, completion: M2) -> Cuckoo.__DoNotUse<(String, (Result<RepositoriesModel, ErrorCode>) -> Void), Void> where M1.MatchedType == String, M2.MatchedType == (Result<RepositoriesModel, ErrorCode>) -> Void {
+	        let matchers: [Cuckoo.ParameterMatcher<(String, (Result<RepositoriesModel, ErrorCode>) -> Void)>] = [wrap(matchable: page) { $0.0 }, wrap(matchable: completion) { $0.1 }]
+	        return cuckoo_manager.verify("requestRepositories(page: String, completion: @escaping (Result<RepositoriesModel, ErrorCode>) -> Void)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	    @discardableResult
-	    func requestPullRequests<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable, M3: Cuckoo.Matchable>(user: M1, repository: M2, completion: M3) -> Cuckoo.__DoNotUse<(String, String, (Result<[PullRequest], Error>) -> Void), Void> where M1.MatchedType == String, M2.MatchedType == String, M3.MatchedType == (Result<[PullRequest], Error>) -> Void {
-	        let matchers: [Cuckoo.ParameterMatcher<(String, String, (Result<[PullRequest], Error>) -> Void)>] = [wrap(matchable: user) { $0.0 }, wrap(matchable: repository) { $0.1 }, wrap(matchable: completion) { $0.2 }]
-	        return cuckoo_manager.verify("requestPullRequests(user: String, repository: String, completion: @escaping (Result<[PullRequest], Error>) -> Void)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    func requestPullRequests<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable, M3: Cuckoo.Matchable>(user: M1, repository: M2, completion: M3) -> Cuckoo.__DoNotUse<(String, String, (Result<[PullRequest], ErrorCode>) -> Void), Void> where M1.MatchedType == String, M2.MatchedType == String, M3.MatchedType == (Result<[PullRequest], ErrorCode>) -> Void {
+	        let matchers: [Cuckoo.ParameterMatcher<(String, String, (Result<[PullRequest], ErrorCode>) -> Void)>] = [wrap(matchable: user) { $0.0 }, wrap(matchable: repository) { $0.1 }, wrap(matchable: completion) { $0.2 }]
+	        return cuckoo_manager.verify("requestPullRequests(user: String, repository: String, completion: @escaping (Result<[PullRequest], ErrorCode>) -> Void)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	}
@@ -239,18 +239,18 @@ import UIKit
     
 
     
-     func requestRepositories(page: String, completion: @escaping (Result<RepositoriesModel, Error>) -> Void)   {
+     func requestRepositories(page: String, completion: @escaping (Result<RepositoriesModel, ErrorCode>) -> Void)   {
         return DefaultValueRegistry.defaultValue(for: (Void).self)
     }
     
-     func requestPullRequests(user: String, repository: String, completion: @escaping (Result<[PullRequest], Error>) -> Void)   {
+     func requestPullRequests(user: String, repository: String, completion: @escaping (Result<[PullRequest], ErrorCode>) -> Void)   {
         return DefaultValueRegistry.defaultValue(for: (Void).self)
     }
     
 }
 
 
-// MARK: - Mocks generated from file: JavaPopRepos/pullRequests/PullRequestProtocols.swift at 2020-07-12 22:56:48 +0000
+// MARK: - Mocks generated from file: JavaPopRepos/pullRequests/PullRequestProtocols.swift at 2020-07-13 02:23:01 +0000
 
 
 import Cuckoo
@@ -468,7 +468,7 @@ import Cuckoo
 }
 
 
-// MARK: - Mocks generated from file: JavaPopRepos/root/RootProtocols.swift at 2020-07-12 22:56:48 +0000
+// MARK: - Mocks generated from file: JavaPopRepos/root/RootProtocols.swift at 2020-07-13 02:23:01 +0000
 
 
 import Cuckoo
