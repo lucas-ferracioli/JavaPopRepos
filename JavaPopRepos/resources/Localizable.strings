@@ -1,0 +1,21 @@
+// General
+"appName" = "JavaPopRepos";
+"pullRequests" = "Pull Requests";
+
+// Empty State
+"noData" = "No available data";
+
+// Error State
+"errorDescription" = "The operation couldn't be completed.\nPlease try again.";
+"tryAgain" = "Try again";
+
+// Root
+"noDescription" = "No description";
+"rootCellIdentifier" = "root_view_cell";
+"numberOfStars" = "Number of stars:";
+"numberOfForks" = "Number of forks:";
+
+// Pull Requests
+"createdAt" = "Created at";
+"noBody" = "No body";
+"pullRequestCellIdentifier" = "pull_request_view_cell";
